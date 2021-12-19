@@ -1,0 +1,8515 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multirow}
+
+\usepackage{multicol}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.8cm
+\topmargin 1cm
+\rightmargin 0.8cm
+\bottommargin 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+
+\series bold
+\size large
+Analysis of Different Particle Decays via Simulation of GEANT3 & Data from
+ ATLAS
+\end_layout
+
+\begin_layout Author
+\noindent
+
+\series bold
+Oren Kereth, Alon Shaaltiel and Gadi Ninio
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset FormulaMacro
+\newcommand{\p}{\pi^{0}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ten}[1]{\cdot10{}^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\k}{K_{S}^{0}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vp}{\varphi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\s}{\sigma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sub}[1]{_{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\fr}[2]{\frac{#1}{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\noindent
+
+\size normal
+In this experiment, using the GEANT3 simulation[1], the invariant mass of
+ 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ and the lifetime of 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ were measured through the tracks, energies and momenta of their decay products.
+ The measurements yielded 
+\begin_inset Formula ${\textstyle \fr{\abs{M_{0}^{\p}-M_{theory}^{\p}}}{/M_{theory}^{\p}}=1.9\%}$
+\end_inset
+
+ and 
+\begin_inset Formula $N\sigma=3.7$
+\end_inset
+
+ for the invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+; 
+\begin_inset Formula $\fr{\left|M_{0}^{\k}-M_{theory}^{\k}\right|}{M_{theory}^{\k}}=11\%$
+\end_inset
+
+ and 
+\begin_inset Formula $N\sigma=3.7$
+\end_inset
+
+ for the invariant mass of 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|\tau^{\k}-\tau_{theory}^{\k}\right|}{\tau_{theory}^{\k}}=66\%$
+\end_inset
+
+ and 
+\begin_inset Formula $N\sigma=8.3$
+\end_inset
+
+ for the mean lifetime of 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+.
+ Afterwards, using raw data from ATLAS, the mesons 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ , 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ and the boson 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ were identified via the pairing of electrons and positrons from about 900,000
+ events.
+ The masses of 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ were then found through data driven background estimation and compared
+ to the literature, yielding 
+\begin_inset Formula $N\sigma=2.4$
+\end_inset
+
+ and 
+\begin_inset Formula ${\textstyle \frac{\left|M_{0}^{\Upsilon(1S)}-M_{0_{theory}}^{\Upsilon(1S)}\right|}{M_{0_{theory}}^{\Upsilon(1S)}}=1.8\%}$
+\end_inset
+
+ for 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ and 
+\begin_inset Formula $N\s=0.18$
+\end_inset
+
+ and 
+\begin_inset Formula ${\textstyle \frac{\left|M_{0}^{J/\psi}-M_{0_{theory}}^{J/\psi}\right|}{M_{0_{theory}}^{J/\psi}}=0.45\%}$
+\end_inset
+
+ for 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+Theory
+\series medium
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I'm not using any template at the moment, I think we should ask gadi about
+ it
+\backslash
+decide together
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Fermions And Bosons
+\end_layout
+
+\begin_layout Standard
+\noindent
+Particles are of two types: bosons and fermions.
+ Fermions are particles with half-integral spin (
+\begin_inset Formula $1/2,3/2$
+\end_inset
+
+...) who obey the Fermi-Dirac statistic while bosons are particles with integral
+ spin (
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $2$
+\end_inset
+
+...) who obey the Bose-Einstein statistic.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Half-integral or Half-Integer?, and Bose-Einstein should be capitalized
+\end_layout
+
+\begin_layout Plain Layout
+re: now capitalized
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Antiparticles
+\end_layout
+
+\begin_layout Standard
+\noindent
+Antiparticles were predicted by Dirac in 1931 [3].
+ Antiparticles have the same mass and lifetime as their corresponding particles
+ but with opposite charge and magnetic moment.
+ Their existence is a property of both fermions and bosons.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Strangeness, Charmness, 
+\begin_inset Quotes eld
+\end_inset
+
+Topness
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Bottomness
+\begin_inset Quotes erd
+\end_inset
+
+ are all conserved in all but weak interactions.
+ Is this not the place to mention that?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+The Standard Model
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+The Fundamental Particles
+\end_layout
+
+\begin_layout Standard
+\noindent
+According to the Standard Model all matter is built from fundamental spin
+ 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ fermions - quarks and leptons[3].
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Leptons
+\end_layout
+
+\begin_layout Standard
+\noindent
+There are 6 'flavours' of leptons.
+ Three of them are charged with the exact same charge as the electron- electron
+ (
+\begin_inset Formula $e$
+\end_inset
+
+), muon (
+\begin_inset Formula $\mu)$
+\end_inset
+
+ and tau(
+\begin_inset Formula $\tau)$
+\end_inset
+
+ ordered by mass from left to right such that tau is the heaviest of the
+ trio and the electron is the lightest.
+ The other three leptons are neutral and are paired with each flavour of
+ charged lepton[3].
+ These are the neutrinos and their corresponding pair is denoted by their
+ subscript- 
+\begin_inset Formula $\nu_{e}$
+\end_inset
+
+, 
+\begin_inset Formula $\nu_{\mu},\text{\ensuremath{\nu_{\tau}}}$
+\end_inset
+
+also with increasing mass from left to right.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+IMO we should replace 
+\begin_inset Quotes eld
+\end_inset
+
+Three of those...
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+Three of them...
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+re: changed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Quarks
+\end_layout
+
+\begin_layout Standard
+\noindent
+In resemblance to leptons, there are also 6 'flavours' of quarks.
+ Unlike the fermions, quarks carry fractional charges of 
+\begin_inset Formula $\frac{2}{3}\left|e\right|$
+\end_inset
+
+ or 
+\begin_inset Formula $-\frac{1}{3}\left|e\right|$
+\end_inset
+
+.Quarks are grouped into pairs with increasing mass where each pair contains
+ one positively charged particle and a negatively charged one (see Table
+ 1).
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+IMO 
+\begin_inset Quotes eld
+\end_inset
+
+when
+\begin_inset Quotes erd
+\end_inset
+
+ should be replaced by 
+\begin_inset Quotes eld
+\end_inset
+
+where
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+re: changed
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Charge
+\backslash
+Pair
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2/3\left|e\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u (up)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c (charmed)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t (top)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1/3\left|e\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d (down)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+s (strange)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b (bottom)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pairing of the Quarks and their corresponding charges ordered by mass
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ While leptons exist as free particles, the same isn't true for quarks.
+ Because of the strong interaction existing between quarks , quarks are
+ only found in combinations referred to as 'Hadrons'.
+ Two types of hadrons have been established in nature: baryons and mesons
+ [3].
+ Baryons consist of three quarks (e.g the proton is the baryon uud) while
+ mesons consist of one quark and one antiquark (e.g the neutral pion 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+is a meson consisting of u and anti-u or d and anti-d).
+ It is necessary to introduce another degree of freedom for quarks- colorcharge.
+ Unlike the electrical charge, which corresponds to the electromagnetic
+ interaction, color chrage corresponds to the strong interaction .
+ A quark's color can take one of three values: red, green and blue while
+ an antiquark (the anti particle of the quark) can take one of three 'anticolors
+': antired, antigreen and antiblue [3] .
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I think you meant 
+\begin_inset Quotes eld
+\end_inset
+
+...
+ consisting of d and anti-d or u and anti-u).
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+re: yea
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+The Interactions
+\end_layout
+
+\begin_layout Standard
+\noindent
+There are four types of fundamental interactions, each described by the
+ exchange of characteristic bosons [3](see Table 2)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="2cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The Interaction
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The Mediator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Timescale of decay via the interaction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+strong
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gluon, G
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-23}s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+electromagnetic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+photon, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-20}s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+weak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W^{\pm},Z^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-10}s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gravity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+graviton, g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Fundamental Interactions and their corresponding boson mediators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+As mentioned before, strong interactions are those responsible for the binding
+ of quarks together, leading to the creation of mesons and baryons.
+ They are mediated by the massless gluon.
+ Electromagnetic interactions, which are mediated by the exchange of photons
+ are responsible for many intermolecular phenomena.
+ Weak interactions are slow processes (considering the strong and EM interaction
+s) such as 
+\begin_inset Formula $\beta$
+\end_inset
+
+-decay, and are mediated by 
+\begin_inset Formula $W^{\pm},Z^{0}$
+\end_inset
+
+.
+ These bosons have masses of order 100 times the proton mass [3].
+ Gravitational interaction is the weakest amongst them yet every fundamental
+ particle is interacting through it.
+ It is supposedly mediated by the graviton.
+ Charged leptons interact through the EM interaction, and the weak interaction
+ while neutrinos interact weakly only.
+ The quarks interact strongly, weakly and through the EM interaction.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+added the missing 'and'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Special Relativity
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+4-Momentum
+\end_layout
+
+\begin_layout Standard
+\noindent
+Considering the high velocities of particles in the accelerator , special
+ relativity must be applied when addressing the subject of decays and interactio
+ns.
+ The 4-momentum of a particle is defined as
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+P^{\mu}=(E,\overrightarrow{p})\label{4-momentum}
+\end{equation}
+
+\end_inset
+
+where E is the particle's energy and 
+\begin_inset Formula $\overrightarrow{p}$
+\end_inset
+
+ is its spacial momentum.
+ The invariant mass of the particle, which is the same in all frames of
+ reference can also be defined
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+M_{0}^{2}=E^{2}-\left\Vert \overrightarrow{p}\right\Vert ^{2}\label{Invarient Mass}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ is the rest mass of the particle, the invariant mass.
+ Using the invariant mass through this equality is a strong tool when addressing
+ decays, as demonstrated below.
+ In conjunction with the invariant  mass, another fundamental conservation
+ is that of the 4-momentum in a certain frame of reference, which along
+ with the invariant  mass can yield info about the particle (e.g its mass
+ and energy).
+ Suppose a particle decays into two particles whose momenta and masses are
+ known 
+\begin_inset Formula $m_{1},\overrightarrow{p}_{1},m_{2},\overrightarrow{p}_{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $m_{1},\overrightarrow{p}_{1}$
+\end_inset
+
+ are the corresponding mass and momentum of the first particle and 
+\begin_inset Formula $m_{2},\overrightarrow{p}_{2}$
+\end_inset
+
+are the corresponding mass and momentum of the second particle.
+ Using the conservation of 4-momentum before and after the decay and the
+ invariant  mass in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Invarient Mass"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, one can derive the following relation
+\begin_inset Formula 
+\begin{multline}
+M_{0}^{2}=m_{1}^{2}+m_{2}^{2}+2\sqrt{m_{1}^{2}+\left\Vert \overrightarrow{p_{1}}\right\Vert ^{2}}\sqrt{m_{2}^{2}+\left\Vert \overrightarrow{p_{2}}\right\Vert ^{2}}\\
+-2\left\Vert \overrightarrow{p}_{1}\right\Vert \left\Vert \overrightarrow{p}_{2}\right\Vert cos(\theta)\label{Decay}
+\end{multline}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ denotes the angle between the two momenta.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+now using momenta
+\end_layout
+
+\end_inset
+
+This equation will be of significant use during this experiment.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Charged Particle in a Magnetic Field
+\end_layout
+
+\begin_layout Standard
+\noindent
+As explained in the following section, the particles will go through a spectrome
+ter whose purpose is to measure the momentum of the particle.
+ This is done by inducing a uniform magnetic field in a direction perpendicular
+ to the direction of the particle's propagation for a known length, thus
+ applying Lorentz force on the particle given by 
+\begin_inset Formula 
+\begin{equation}
+F=qv_{\perp}B\label{Lorentz force}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $q$
+\end_inset
+
+ is the particle's charge and 
+\begin_inset Formula $v_{\perp}$
+\end_inset
+
+is the velocity in the direction perpendicular to the magnetic field.
+ As a result of the force, the particle will deviate from its original track
+ until it reaches the end of the spectrometer.
+ The curvature of its trajectory can then be measured, (supposing it has
+ an electric charge, otherwise this method will prove ineffective) and by
+ using Newton's second law and the circular motion of the charged particle
+ inside the spectrometer, the particle's momentum can be extracted using
+ the equation
+\begin_inset Formula 
+\begin{equation}
+p_{T}=\frac{qB}{\kappa}\label{spectrometer}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{T}$
+\end_inset
+
+ is the particle's momentum in the direction perpendicular to the magnetic
+ field, its transverse momentum, and 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is the curvature of its trajectory inside the spectrometer.
+ Using this method, the momentum of the decay products of different particles
+ considering these products are charged can now be measured.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+IMO we should drop the 
+\begin_inset Quotes eld
+\end_inset
+
+of course
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset Quotes eld
+\end_inset
+
+(supposing it has an electric charge, otherwise this method will of course
+ prove ineffective)
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Decays
+\end_layout
+
+\begin_layout Standard
+\noindent
+Let us look at a particle decay with a mean lifetime of 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $\tau$
+\end_inset
+
+ can be extremely short in strong interactions, it is useful to define 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, energy width through the uncertainty principle such that 
+\begin_inset Formula 
+\[
+\Gamma=\frac{\hbar}{\tau}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ represents the energy spread of the decaying particle.
+ One can then measure the mass of the decaying particle using its decay
+ products energies, the mass distribution (considering that the particles
+ are relativistic) is given by 
+\begin_inset Formula 
+\begin{equation}
+f_{1}(M;\Gamma,M_{0})=\frac{a}{(M^{2}-M_{0}^{2})^{2}+M_{0}^{2}\Gamma^{2}}\label{BW}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $a$
+\end_inset
+
+ is a normalization factor, 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ is the rest mass and also the resonance mass of the distribution, where
+ the peak occurs.
+ Instead of looking the at the mass (which is also energy) distribution,
+ using the uncertainty principle as used before and a Fourier transform
+ to replace decay energies with decay times, one can get the lifetime distributi
+on in the event of a particle decay
+\begin_inset Formula 
+\begin{equation}
+f_{2}(\tau;\tau_{0})=be^{-\frac{\tau}{\tau_{0}}}\label{lifetime distribution}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $b$
+\end_inset
+
+ is a normalization factor and 
+\begin_inset Formula $\tau_{0}$
+\end_inset
+
+is the mean lifetime which will be measured in this experiment.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+IMO a and b should be in equations.
+\end_layout
+
+\begin_layout Plain Layout
+Perhaps we should rephrase 
+\begin_inset Quotes eld
+\end_inset
+
+and also the resonance mass of the distribution, where the peak occurs.
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Instead of looking the at the mass (which is also energy) distribution
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+IMO 
+\begin_inset Quotes eld
+\end_inset
+
+and the fourrier transform
+\begin_inset Quotes erd
+\end_inset
+
+ should be 
+\begin_inset Quotes eld
+\end_inset
+
+and a fourier transform
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Lifetime
+\end_layout
+
+\begin_layout Standard
+\noindent
+Suppose a particle of rest mass 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ and momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ passes a distance 
+\begin_inset Formula $L$
+\end_inset
+
+ before decaying.
+ Its lifetime 
+\begin_inset Formula $\tau$
+\end_inset
+
+ in its rest frame is thus given by 
+\begin_inset Formula 
+\begin{equation}
+\tau=\frac{M_{0}L}{p}\label{lifetime calc}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Is this the rest mass or the measured mass?, IMO in either case the rest
+ mass should be used
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Electromagnetic Interactions In Medium
+\end_layout
+
+\begin_layout Standard
+\noindent
+In this experiment the energy of electromagnetic interacting decay products
+ such as photons and electrons will be measured using an electromagnetic
+ calorimeter (also called E-Cal).
+ The photons and electrons passing through the E-Cal deposit their energy
+ in it in several ways.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Photons' Energy Deposit
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+
+\series medium
+1)
+\series default
+The Photoelectric Effect:
+\end_layout
+
+\begin_layout Standard
+\noindent
+A photon can deposit its entire energy by ionizing an electron from an atom
+ and providing it with kinetic energy.
+ Energy conservation must be maintained and therefore 
+\begin_inset Formula 
+\begin{equation}
+E_{\gamma}=h\nu=I_{B}+T_{e}\label{Photoelectric effect}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{\gamma}$
+\end_inset
+
+ is the photons energy, 
+\begin_inset Formula $\nu$
+\end_inset
+
+ is its frequency, 
+\begin_inset Formula $I_{B}$
+\end_inset
+
+ is the energy required to free the electron from the atom and 
+\begin_inset Formula $T_{e}$
+\end_inset
+
+ is the kinetic energy of the now free electron[2].
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+
+\series medium
+2) 
+\series default
+Compton Scattering:
+\end_layout
+
+\begin_layout Standard
+\noindent
+One can think of this process as the collision of a photon with frequency
+ 
+\begin_inset Formula $\nu$
+\end_inset
+
+ with a free electron at rest, thus delivering some of its energy and momentum
+ to the electron.
+ Unlike the photoelectric effect, the photon does not deposit its entire
+ energy.
+ The energy deposited by the photon into the medium in this case can be
+ derived using 4-momentum conservation and mass invariance.
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+
+\series medium
+3) 
+\series default
+Pair Production:
+\end_layout
+
+\begin_layout Standard
+\noindent
+When a photon has sufficient energy, it can be absorbed into the medium
+ and produce an electron-positron (the antiparticle of the electron) pair.
+ This conversion can only occur by having the photon deliver some of its
+ momentum , but very little energy to nearby nucleus, otherwise momentum-energy
+ conservation is violated [2].
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Electrons' Energy Deposit
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+
+\series medium
+1) 
+\series default
+Ionization:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Electrons can ionize atoms in their path by interacting electromagnetically
+ with the bound electrons, thus delivering some of their energy to the now
+ free electrons.
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+
+\series medium
+2)
+\series default
+ Bremsstrahlung:
+\end_layout
+
+\begin_layout Standard
+\noindent
+When electrons accelerate or decelerate as a result of electromagnetic interacti
+ons with the medium, they emit energy in the form of photons.
+ This form of energy loss becomes dominant in higher energies [2].
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+When a highly energetic photon or electron passes through the medium, it
+ can create 'showers', these are avalanches of photons and electrons created
+ by the original particle.
+ Suppose that the original particle is a photon, it can therefore ionize
+ atoms via the photoelectric effect.
+ The resulting free electrons can now ionize atoms themselves or emit photons
+ via bremsstrahlung and thus a 'shower' is created, ending with the deposit
+ of all the energy of the energetic particle in the medium.
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+The Simulation and Calibration
+\series medium
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+In lack of a better name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+The Simulation
+\end_layout
+
+\begin_layout Standard
+\noindent
+The simulation consists of a magnetic spectrometer, EM calorimeter, iron
+ yoke and muon chamber [1].
+ Each event starts with the generation and injection of a neutral or charged
+ particle from a given list with a known energy.
+ For particles traversing sensitive areas, the program stores 'hits'.
+ At the end of the event processing, the program uses the hits to simulate
+ the data produced by the detector, which includes raw data and also reconstruct
+ed parameters [1].
+ Suppose a 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ is injected into the detector with a momentum of 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+, see Appendix A for the output.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+The Magnetic Spectrometer
+\end_layout
+
+\begin_layout Standard
+\noindent
+The Magnetic Spectrometer consists of 10 drift chambers inside a uniform
+ magnetic field.
+ The magnetic field applies a Lorentz force on charged particles, making
+ them deviate from their original track as explained in 1.6.
+ A chamber's dimensions are 
+\begin_inset Formula $3\times62\times60\,cm^{3}$
+\end_inset
+
+ and the distance between two chambers is 
+\begin_inset Formula $8\,cm$
+\end_inset
+
+.
+ It consists of two planes of 5 anode and 6 cathode wires made of tungsten.
+ The wires are strung parallel to the z-axis on a frame made of G10 material[1].
+ A measurement of the drift time on the sense wires allows measurement of
+ the y position, needed for curvature determination.
+ The measured hit positions are displayed in the graphical output as crosses
+ [1].
+ When a charged particle passes through the spectrometer the simulation
+ outputs its curvature, 'AKAPPA' , as seen in Appendix A and 
+\begin_inset Quotes eld
+\end_inset
+
+TANDIP
+\begin_inset Quotes erd
+\end_inset
+
+, the tangent of the dip angle which will be denoted as 
+\begin_inset Formula $\theta_{dip}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Changes: dropped 
+\begin_inset Quotes eld
+\end_inset
+
+thus
+\begin_inset Quotes erd
+\end_inset
+
+, changed 
+\begin_inset Quotes eld
+\end_inset
+
+which is
+\begin_inset Quotes erd
+\end_inset
+
+ to a comma, deleted notes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+The Electromagnetic Calorimeter (E-Cal)
+\series medium
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Maybe add 
+\begin_inset Quotes eld
+\end_inset
+
+(E-Cal)
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The E-Cal's function is to detect and measure the energy and location of
+ electrons, positrons and photons, which deposit their energy inside of
+ it as explained in section 1.9 through showers of electrons, positrons and
+ photons.
+ It is simulated as an array of 650 BGO crystals positioned 
+\begin_inset Formula $10cm$
+\end_inset
+
+ behind the magnetic spectrometer.
+ The 'shower' then interacts with activators doped into the crystal that
+ can be excited by electron-hole pairs produced by charged particles in
+ the crystal lattice; these dopants can then de-excite through photon emission.
+ These photons go through a PMT (photo multiplier) which amplifies the signal
+ linearly and outputs a pulse.
+ The E-Cal measures the pulse-height, which is proportional to the energy
+ deposited in each crystal [2].
+ The hits are represented on a front view of the detector as circles with
+ the size of each circle proportional to the signal height in the corresponding
+ crystal.
+ The program attempts to associate the hit crystals into clusters and outputs
+ the clusters locations and pulse heights[1].
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Changes: Added 
+\begin_inset Quotes eld
+\end_inset
+
+E-Cal
+\begin_inset Quotes erd
+\end_inset
+
+ to headline, dropped 
+\begin_inset Quotes eld
+\end_inset
+
+then
+\begin_inset Quotes erd
+\end_inset
+
+ and changed 
+\begin_inset Quotes eld
+\end_inset
+
+that
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+which
+\begin_inset Quotes erd
+\end_inset
+
+, replaced 
+\begin_inset Quotes eld
+\end_inset
+
+The information provided from this part is the pulse height
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+The E-Cal measures the pulse-height
+\begin_inset Quotes erd
+\end_inset
+
+ and shortened 
+\begin_inset Quotes eld
+\end_inset
+
+pulse-height which presents the energy deposited in each crystal and is
+ proprotional to it
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+pulse-height is proprotional to the energy diposited in the each crystal
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Iron Yoke and Muon Chambers
+\end_layout
+
+\begin_layout Standard
+\noindent
+The Iron Yoke is a hadron calorimeter (h-cal) designed to stop the hadrons
+ by hadronic interactions.
+ It is placed 10 cm behind the E-Cal
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Missing capitalization?
+\end_layout
+
+\end_inset
+
+.
+ Two drift chambers similar to those of the magnetic spectrometer serve
+ as a muon detector, which measures the position of charged particles that
+ pass through it [1].
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Calibration
+\end_layout
+
+\begin_layout Standard
+\noindent
+In order to measure the momentum and energy of a particle moving through
+ the detector, it is essential to calibrate the system.
+ The strength of the induced magnetic field in the spectrometer must be
+ known in order to extract the momentum of the particle from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ given the curvature outputted by the simulation.
+ The same applies for the conversion from pulse height outputted by the
+ simulation as a result of a particle passing through the E-Cal to its energy.
+ Therefore, particles with known mass and momentum were injected into the
+ detector, their curvature and pulse heights were outputted and with these
+ measurements one can find the magnetic field operating in the spectrometer,
+ which will be symbolized by 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ and the relationship between the pulse height and energy.
+ More specifically, in order to measure 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ electrons and muons (carrying a negative elementary charge) were injected
+ at various momenta.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ one can find the induced magnetic field using the transverse momentum and
+ curvature.
+ By injecting charged particles at various momenta one can plot a linear
+ fit between the curvature and the inverse of the transverse momentum.
+ The slope of the fit will be proportional to 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ and other known constants.
+ 10 momentum values were chosen starting at 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+ all the way up to 
+\begin_inset Formula $100\,GeV$
+\end_inset
+
+ with increments of 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+ between them.
+ 10 injections were made for each value.
+ The averages of 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{T}^{-1}$
+\end_inset
+
+ were taken as the representing measurement for each momentum.
+ The same number of photons, with the same momenta were injected as well.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+[More specifically, in order to measure 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ 100 electrons and 100 muons were injected into the detector, where 10 energy
+ values were chosen, for which 10 measurements were made.
+ The average of the curvature 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ of these 10 measurements was then calculated and taken as the representing
+ measurement of that energy value.
+ These values were 10 through 100 in steps of 10
+\begin_inset Formula $GeV$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This sentence can (be) phrased better, I'm just not sure how (Oren)
+\end_layout
+
+\begin_layout Plain Layout
+IMO we should rephrase from 
+\begin_inset Quotes eld
+\end_inset
+
+More specifically...
+\begin_inset Quotes erd
+\end_inset
+
+ to this point.
+ This rephrasing will also include a sentence or a little more about the
+ momentum.
+ (Alon)
+\end_layout
+
+\end_inset
+
+ Additionally, 100 photons
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+As with the mouns and electrons IMO we should not specify the number of
+ particles injected but rather the energies and number of measurments per
+ energy
+\end_layout
+
+\end_inset
+
+ were injected into the detector as well, with their energies varying as
+ detailed above.]
+\end_layout
+
+\end_inset
+
+ The average of the pulse height for each momentum value was taken as the
+ representing measurement.
+ Using the measurements of curvature collected from the muons and electrons
+ (but not from the photons as they are electrically neutral) and the measurement
+s of pulse height collected from the electrons and photons (but not from
+ the muons, as they do not deposit their entire energy in the E-Cal), the
+ magnetic field and the relationship between pulse height and energy can
+ be characterized.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Changes: dropped 
+\begin_inset Quotes eld
+\end_inset
+
+respectively
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+also
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+We should rephrase everything from 
+\begin_inset Quotes eld
+\end_inset
+
+More specifically...
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+Additionally, 100 photons were injected into the detector as well
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Extracting The Magnetic Field
+\end_layout
+
+\begin_layout Standard
+\noindent
+Suppose a particle with momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ and charge 
+\begin_inset Formula $e$
+\end_inset
+
+ is injected into the detector, given 
+\begin_inset Formula $\theta_{dip}$
+\end_inset
+
+ which can be calculated using arctan on 'TANDIP' , the momentum perpendicular
+ to the magnetic field can be calculated
+\begin_inset Formula 
+\begin{equation}
+p_{T}=pcos(\theta_{dip})\label{perpendicular momentum}
+\end{equation}
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ using the measurements of the electrons and muons and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "perpendicular momentum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, a fit of the form
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+\kappa=\frac{a_{0}}{p_{T}}+a_{1}\label{kappa fit}
+\end{equation}
+
+\end_inset
+
+was done.
+ Where 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with slight modifications due to the simulation is 
+\begin_inset Formula $a_{0}=$
+\end_inset
+
+
+\begin_inset Formula $\frac{\left|e\right|B_{0}}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+is expected to be 0 or near that value.
+ Two fits of the form in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "kappa fit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ were made, one for the electrons and the other for muons.
+ The average of 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+was then calculated, from which the magnetic field 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ was extracted.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename Fit/First Part/κ- אלקטרונים/electrons-fixedlinearfit.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Electrons fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename Fit/First Part/κ- מיואונים/muons-fixedlinearfit.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Muons fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linear fits of the measured curvature of the trajectory, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ (measured in 
+\begin_inset Formula $\frac{1}{cm}$
+\end_inset
+
+) as a function of one over the electrons/muons transverse momentum, 
+\begin_inset Formula $\frac{1}{p_{T}}$
+\end_inset
+
+(measured in 
+\begin_inset Formula $\frac{1}{GeV}$
+\end_inset
+
+) calculated using the particle's momentum through 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "perpendicular momentum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The fit parameters for each of the fits are given by (see Table 3)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Electrons
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a_{0}\pm\Delta a_{0}\unitfrac{GeV}{cm}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a_{1}\pm\Delta a_{1}\unitfrac{1}{cm}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $2.000E-03\pm3.1E-05$
+\end_inset
+
+(1.6%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-8.0E-07\pm1.15E-06$
+\end_inset
+
+(140%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Muons
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a_{0}\pm\Delta a_{0}\unitfrac{GeV}{cm}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a_{1}\pm\Delta a_{1}\unitfrac{1}{cm}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $2.000E-03\pm3.1E-05$
+\end_inset
+
+(1.6%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $4.6E-07\pm1.00E-06$
+\end_inset
+
+(220%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the linear fits of the curvature of the
+ trajectory, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ as a function of one over the transverse momentum, 
+\begin_inset Formula $\frac{1}{p_{T}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+and the average fit parameters are as follows (see Table 4)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}^{AVG}\unitfrac{GeV}{cm}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.000E-03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.2E-05$
+\end_inset
+
+(1.1%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}^{AVG}\unitfrac{1}{cm}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1.7E-07$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.6E-07$
+\end_inset
+
+(440%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Average fit parameters of the linear fits of the curvature of the trajectory,
+ 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ as a function of one over the transverse momentum, 
+\begin_inset Formula $\frac{1}{p_{T}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The magnetic field was extracted and is given by 
+\begin_inset Formula $B_{0}=1.334403\pm2.9\ten{-5}T$
+\end_inset
+
+ with a relative error of 
+\begin_inset Formula $0.0022\%$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+is consistent with the expected value of 0.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In both fits the statistics (see Appendix B) and the plots indicate a very
+ high correlation with the theory.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Pulse Height
+\end_layout
+
+\begin_layout Standard
+\noindent
+To correlate between pulse height and the energy of the particle traversing
+ through the E-Cal, two linear fits were made.
+ One fit was of the electrons and the other of the photons injected into
+ the detector.
+ The fits made were of the form 
+\begin_inset Formula 
+\[
+P=b_{1}P.H+b_{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P$
+\end_inset
+
+ is the momentum of the particle sent (which is its energy for photons and
+ approximately its energy for electrons considering its mass is negligible
+ compared to it) and 
+\begin_inset Formula $P.H$
+\end_inset
+
+ is the total pulse height outputted by the simulation associated with that
+ particle.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename Fit/First Part/Electron - PH/fitfixed-electrons.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Electrons fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename Fit/First Part/Photon - PH/photons-linearfitfixed.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Photons fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linear fits of the electrons'/photons' momentum P (measured in 
+\begin_inset Formula $GeV$
+\end_inset
+
+) as a function of the measured pulse height of the particle (measured in
+ 
+\begin_inset Formula $nV$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameters for each of the fits are given by (see Table 5)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+
+\size small
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Electrons
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b_{1}\pm\Delta b_{1}\unitfrac{GeV}{nV}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b_{2}\pm\Delta b_{2}GeV$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $2.0508E-02\pm2.4E-05$
+\end_inset
+
+(0.12%)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $4.95E-01\pm2.9E-02$
+\end_inset
+
+(5.9%)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Photons
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b_{1}\pm\Delta b_{1}\unitfrac{GeV}{nV}$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b_{2}\pm\Delta b_{2}GeV$
+\end_inset
+
+(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $2.0621E-02\pm2.9E-05$
+\end_inset
+
+(0.14%)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $4.07E-01\pm3.5E-02$
+\end_inset
+
+(8.6%)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the linear fits of the curvature of the
+ trajectory, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ as a function of one over the transverse momentum, 
+\begin_inset Formula $\frac{1}{p_{T}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+and the average fit parameters are as follows (see Table 6)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="2cm">
+<column alignment="left" valignment="middle" width="2cm">
+<column alignment="left" valignment="middle" width="3cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}^{AVG}\unitfrac{GeV}{nV}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.0600E-02$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.9E-05(0.092\%)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{2}^{AVG}GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.51E-01$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.3E-02(5.0\%)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Average Fit Parameters of the linear fits of the curvature of the trajectory,
+ 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ as a function of one over the transverse momentum, 
+\begin_inset Formula $\frac{1}{p_{T}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In both fits the statistics (see Appendix B) and the plots indicate a good
+ fit and an overestimation of the error term on the pulse-height.
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+Measurements and Results
+\end_layout
+
+\begin_layout Standard
+\noindent
+In this part of the experiment, the particles 
+\begin_inset Formula $\p$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ were injected into the detector.
+ Their decays were analysed and through the decay products their invariant
+ mass was calculated and their mean lifetime (calculated only for 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ for reasons detailed later).
+ The magnetic field in the spectrometer can be adjusted via a parameter
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in the simulation which factors the magnetic field.
+ 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ for the measurements of 
+\begin_inset Formula $\p$
+\end_inset
+
+ and was changed to 
+\begin_inset Formula $\alpha=4$
+\end_inset
+
+ for the measurements of 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Measurements Concerning 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The meson 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+ is made up of an 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset Formula $\overline{u}$
+\end_inset
+
+ pair or 
+\begin_inset Formula $d$
+\end_inset
+
+ 
+\begin_inset Formula $\overline{d}$
+\end_inset
+
+ pair.
+ Its invariant  mass is 
+\begin_inset Formula $M_{PDG}^{\p}=1.3497680\times10^{-1}\text{±}5.0\times10^{-7}GeV$
+\end_inset
+
+ [4] and its mean lifetime is 
+\begin_inset Formula $\tau_{\pi^{0}}=(8.43\text{±}0.13)\text{×}10{}^{-17}s$
+\end_inset
+
+.
+ In the vast majority of cases (99%) 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+ decays into two photons 
+\begin_inset Formula $2\gamma$
+\end_inset
+
+.
+ Decays occurring via this decay mode have two distinct clusters (one for
+ each photon) in the E-Cal and have no tracks in the spectrometer (since
+ they have no electric charge, this also implies they move in straight lines
+ through it) will be considered 
+\begin_inset Quotes eld
+\end_inset
+
+interesting events
+\begin_inset Quotes erd
+\end_inset
+
+ and will be the subject of measurements in this part.
+ However, if an event contains tracks or more than 2 clusters it will not
+ be counted as it is a bug in the simulation, and if there are less than
+ 2 clusters the method of extracting the invariant mass will not work.
+ Other decay modes will be counted but will not be analyzed.
+ And so, these measurements will be discarded.
+ The branching ratio of the interesting decay mode will be compared with
+ the expected value of 99%.
+ Because of its short mean lifetime compared with the resolution of the
+ detector, 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+'s lifetime will not be measured in this experiment and only its invariant
+  mass will be plotted.
+ In addition to that, it is assumed that 
+\begin_inset Formula $\pi^{0}$
+\end_inset
+
+decays right at the injection point.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+
+\series medium
+Invariant Mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+ will be measured using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Since photons have no mass their energies and momenta are the same and
+ their invariant mass is 0.
+ Using the calibration and pulse heights, the energies of the photons will
+ be measured.
+ Using the location of the clusters for each of the photons and under the
+ assumption that 
+\begin_inset Formula $\p$
+\end_inset
+
+decays instantly upon injection, the cosine of the angle between the momenta
+ of the photons was calculated via the relation
+\begin_inset Formula 
+\begin{equation}
+cos(\theta)=\frac{\overrightarrow{r}_{1}\cdot\overrightarrow{r}_{2}}{\left\Vert \overrightarrow{r}_{1}\right\Vert \left\Vert \overrightarrow{r}_{2}\right\Vert }\label{eq:cosine of angle}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\overrightarrow{r}_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{r}_{2}$
+\end_inset
+
+ are the two position vectors for each of the clusters after adding 
+\begin_inset Formula $10\,cm$
+\end_inset
+
+ to the x component because the particles are injected at 
+\begin_inset Formula $x=-10\,cm$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Mass Distribution of 
+\begin_inset Formula $\p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+586 
+\begin_inset Formula $\p$
+\end_inset
+
+ were injected into the detector with a momentum of 
+\begin_inset Formula $5\,GeV$
+\end_inset
+
+ (according to the simulation).
+ Out of the 586 events, 
+\begin_inset Formula $13\%$
+\end_inset
+
+ were discarded due to bugs and the remaining 
+\begin_inset Formula $87\%$
+\end_inset
+
+ (509 events) were all characterized by no track and 2 clusters in the E-Cal,
+ resulting in a branching ratio of 100% for the decay 
+\begin_inset Formula $\p\rightarrow2\gamma$
+\end_inset
+
+ in 
+\begin_inset Quotes eld
+\end_inset
+
+interesting events
+\begin_inset Quotes erd
+\end_inset
+
+.
+ From every interesting event, the invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+ was calculated using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Afterwards, a histogram with 80 bins, each with width of 
+\begin_inset Formula $1.4\ten{-3}\,GeV$
+\end_inset
+
+ was made.
+ The average mass in each bin was then taken as the representing measurement
+ of that bin.
+ The number of events in each bin should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Therefore, a Breit-Wigner fit of the form 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Changed 
+\begin_inset Quotes eld
+\end_inset
+
+The representing masses from each bin, where the corresponding number of
+ events for each mass is that of the bin from which it was taken, should
+ distribute according to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Therefore, a Breit-Wigner fit of the form
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+The number of events in each bin should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Therefore, a Breit-Wigner fit of the form
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Events\sub{\p}(M)=\frac{a_{0}}{(M^{2}-a_{1}^{2})^{2}+a_{1}^{2}a_{2}^{2}}\label{B-W fit pi0}
+\end{equation}
+
+\end_inset
+
+was made, where 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ is the normalization factor and 
+\begin_inset Formula $a_{1},a_{2}$
+\end_inset
+
+ represent the invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+, 
+\begin_inset Formula $M_{0}^{\p}$
+\end_inset
+
+and the energy width, 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ respectively.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Second Part/Mass fit/Pi0-2tenth-80/bw_fitting.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Breit-Wigner distribution fit for the mass histogram of 
+\begin_inset Formula $\p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameter are as follows (see Table 7)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}\,\unitfrac{Events}{GeV^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.18\ten{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.5\ten{-5}$
+\end_inset
+
+(11%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}\,GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.3761\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.1\ten{-4}$
+\end_inset
+
+(0.51%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}\,GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.77\ten{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.5\ten{-3}$
+\end_inset
+
+(8.4%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.24$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the BW distribution fit for the mass histogram
+ of 
+\begin_inset Formula $\p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Using the fit parameters and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+ was extracted 
+\begin_inset Formula 
+\[
+M_{0}^{\p}=1.3761\ten{-1}\pm7.1\ten{-4}\,GeV\,(0.51\%\,error)
+\]
+
+\end_inset
+
+The extracted value was then compared with the one taken from the literature
+ [4] resulting in: 
+\begin_inset Formula $N\sigma=3.7$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|M_{0}^{\p}-M_{theory}^{\p}\right|}{M_{theory}^{\p}}=1.9\%$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+These statistics and metrics indicate a good fit and correlation with the
+ theory.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Discussion
+\end_layout
+
+\begin_layout Standard
+\noindent
+The results are in clear agreement with the theory and are statistically
+ significant.
+ This is accompanied by the simulation's 
+\begin_inset Formula $\p\to2\gamma$
+\end_inset
+
+ branching ratio, 100%, which is very close to the theoretical value, 99%
+ [4].
+ However, there is still a problem which has not been addressed.
+\end_layout
+
+\begin_layout Standard
+\noindent
+There is a discrepancy between the fit line and number of events at the
+ lower range of the mass spectrum.
+ A possible cause for this discrepancy is the method of measurement, specificall
+y how the angle between the photons is measured.
+ The method requires 2 distinct pulse-height clusters, which means the sum
+ of the showers' widths must be smaller than the distance between them.
+ For a sufficiently energetic particle or a small enough angle, 2 clusters
+ are impossible.
+ This, in turn, means that below a certain angle measurements are much more
+ likely to be discarded.
+ Noting the fact that the invariant mass squared is proportional to 
+\begin_inset Formula $1-\cos\theta$
+\end_inset
+
+, it is clear why the measurements are lacking in events with a small invariant
+ mass.
+ If said events were not missing, the fit would have shifted left such that
+ the extracted invariant mass will decrease and get closer to the theoretical
+ value.
+ 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series medium
+\size normal
+Measurements concerning 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The meson 
+\begin_inset Formula $\k$
+\end_inset
+
+ is made up of a 
+\begin_inset Formula $d\,\bar{s}$
+\end_inset
+
+ pair.
+ Its invariant mass is 
+\begin_inset Formula $M_{theory}^{\k}=4.97611\ten{-1}\pm1.3\ten{-5}\,GeV$
+\end_inset
+
+ [4] and its mean lifetime is 
+\begin_inset Formula $\tau_{\k}=8.9564\ten{-11}\pm3.3\ten{-14}\,s$
+\end_inset
+
+.
+ The lifetime, 
+\begin_inset Formula $c\tau_{\k}=2.6844\,cm$
+\end_inset
+
+ is of the same order as the spectrometer's resolution, meaning the particle
+ decays along the path from the injection point to the E-Cal.
+ 
+\begin_inset Formula $\k$
+\end_inset
+
+'s two most common decay modes, which together occur 
+\begin_inset Formula $99.9\%$
+\end_inset
+
+ of the time, are 
+\begin_inset Formula $\k\rightarrow\p\p\,(30.7\%)$
+\end_inset
+
+ and 
+\begin_inset Formula $\k\rightarrow\pi^{+}\pi^{-}\,(69.2\%)$
+\end_inset
+
+ [4].
+ This experiment will not consider any other decay modes.
+ As was mentioned in the previous section, 
+\begin_inset Formula $\p$
+\end_inset
+
+ decays instantaneously (when compared with the resolution of the spectrometer)
+ via 
+\begin_inset Formula $\p\rightarrow2\gamma$
+\end_inset
+
+.
+ Photons or 
+\begin_inset Formula $\p$
+\end_inset
+
+ particles leave no trace in the spectrometer which makes locating the vertex
+ of the decay impossible.
+ The vertex of the decay is necessary in the calculation of the lifetime,
+ which should be measurable using the 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ decay mode.
+ 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ have an elementary charge corresponding to their sign and a lifetime of
+ 
+\begin_inset Formula $c\tau_{\pi^{\pm}}=7.8045\,m$
+\end_inset
+
+ [4] which is significantly greater than the length of the measurement apparatus
+, and so, it is assumed they do not decay.
+ As 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ are hadrons they do not deposit their entire energy inside the E-Cal and
+ their momentum must be measured in some other way.
+ The 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ particles are charged and therefore have their trajectories curved by the
+ magnetic field and leave a trace in the spectrometer.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the curvature outputted by the simulation, it is possible to measure
+ the transverse momentum of each particle.
+ Using conservation of 3-momentum, the angle between the particles at the
+ decay vertex, and the position of the vertex (see Appendix E), it is possible
+ to calculate both the invariant mass and the lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+.
+ It is clear then that this is the decay mode of interest.
+ As with the previous section, some events make measurement impossible or
+ incorrect, if produced by a bug in the simulation, thus, an 
+\begin_inset Quotes eld
+\end_inset
+
+interesting event
+\begin_inset Quotes erd
+\end_inset
+
+ must be defined, all other events (excluding those which did not register
+ in any detector) will be counted and promptly discarded.
+ An 
+\begin_inset Quotes eld
+\end_inset
+
+interesting event
+\begin_inset Quotes erd
+\end_inset
+
+ will have 2-3 tracks (which are identified by the simulation), opposite
+ curvatures in the chosen tracks (if there are 3) and the tracks must share
+ a vertex.
+ In case there are 3 tracks, the two tracks with the most hits are taken.
+ In order to compare the branching ratio of the different decay modes to
+ the theoretical value each event is classified into 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+, 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ or 
+\begin_inset Formula $BUG$
+\end_inset
+
+.
+ A 
+\begin_inset Formula $BUG$
+\end_inset
+
+ is an event with more than 
+\begin_inset Formula $5$
+\end_inset
+
+ pulse-height clusters or with no interaction with the E-Cal and spectrometer.
+ These events are discarded without being considered in the branching ratio,
+ they account for 
+\begin_inset Formula $3.8\%$
+\end_inset
+
+ of the events.
+ As it is simpler to define what a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ event registers, it is assumed that all events which are not a 
+\begin_inset Formula $BUG$
+\end_inset
+
+ or a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ are 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ events.
+ And so, a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ event is expected to have a pulse-height cluster(s) and no track.
+ In the simulation, 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ account for 
+\begin_inset Formula $44\%$
+\end_inset
+
+ of events, thus, 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ account for 
+\begin_inset Formula $56\%$
+\end_inset
+
+ of events.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Invariant Mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ will be measured using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The mass of 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ is 
+\begin_inset Formula $M_{theory}^{\pi^{\pm}}=1.395704\ten{-1}\pm1\ten{-7}\,GeV$
+\end_inset
+
+ [4], and their momenta will be calculated using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the calibration, the angle between the particles is given by the simulation
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+Phi
+\begin_inset Quotes erd
+\end_inset
+
+ at the vertex.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Mass Distribution of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+2015 
+\begin_inset Formula $\k$
+\end_inset
+
+ were injected into the detector with a momentum of 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+ (according to the simulation).
+ Out of the 2015 events, 
+\begin_inset Formula $14\%$
+\end_inset
+
+ (286 events) were 
+\begin_inset Quotes eld
+\end_inset
+
+interesting events
+\begin_inset Quotes erd
+\end_inset
+
+ used to calculate the invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ was calculated using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Afterwards, a histogram with 7 bins, each with width of 
+\begin_inset Formula $2.9\ten{-2}\,GeV$
+\end_inset
+
+ was made.
+ The average mass in each bin was then taken as the representing measurement
+ of that bin.
+ Just as with 
+\begin_inset Formula $\p$
+\end_inset
+
+, the invariant mass should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and so, a fit of the form presented in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ was made.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Second Part/Mass fit/K_short/bw_fitting.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Breit-Wigner distribution fit for the mass histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameter are as follows (see Table 8)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\k$
+\end_inset
+
+ Invariant Mass
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}[\unitfrac{Events}{GeV^{2}]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.39\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.3\ten{-2}$
+\end_inset
+
+(38%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.42\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.5\ten{-2}$
+\end_inset
+
+(3.5%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.26\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.1\ten{-2}$
+\end_inset
+
+(40%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the BW distribution fit for the mass histogram
+ of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Using the fit parameters and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ was extracted 
+\begin_inset Formula 
+\[
+M_{0}^{\k}=4.42\ten{-1}\pm1.5\ten{-2}\,GeV\,(3.5\%\,error)
+\]
+
+\end_inset
+
+The extracted value was then compared with the one taken from the literature
+ [4] resulting in: 
+\begin_inset Formula $N\sigma=3.7$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|M_{0}^{\k}-M_{theory}^{\k}\right|}{M_{theory}^{\k}}=11\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The statistics show a good correlation with the theory, yet the fit itself
+ does not have a definite peak correlating to the data, as the peak in the
+ data is more to the right.
+ The metrics show that the measured values are far from the theoretical
+ values compared to their error and value.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+ will be calculated using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "lifetime calc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Each event has a measured invariant mass which will be used.
+ The length 
+\begin_inset Formula $L$
+\end_inset
+
+ is calculated using the vertex's position after adding 
+\begin_inset Formula $10\,cm$
+\end_inset
+
+ to the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis, since the injection point is at 
+\begin_inset Formula $x=-10\,cm$
+\end_inset
+
+.
+ The momentum's, 
+\begin_inset Formula $p$
+\end_inset
+
+, calculation is in Appendix E.
+ A histogram with 45 bins, each with a width of 
+\begin_inset Formula $1.1\ten{-11}\,s$
+\end_inset
+
+ was made.
+ The average lifetime in each bin was then taken as the representing measurement
+ of that bin.
+ The number of events in each bin should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "lifetime distribution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Therefore, an exponential fit of the form 
+\begin_inset Formula 
+\begin{equation}
+Events_{\k}(\tau)=a_{0}e^{-\frac{\tau}{\tau_{0}}}+a_{1}\label{expo fit - kShort}
+\end{equation}
+
+\end_inset
+
+was made (see Figure 5).
+ Where 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ is the normalization factor, 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is a free parameter expected to be 0 and 
+\begin_inset Formula $\tau_{0}$
+\end_inset
+
+ is the mean lifetime of 
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ later compared with the theoretical value.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Second Part/LifetimeFit/tau_fitting.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exponential distribution fit for the lifetime histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameter are as follows (see Table 9)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $K_{s}^{0}$
+\end_inset
+
+ Lifetime
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $560$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $360$
+\end_inset
+
+ (63%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{0}[s]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.03\ten{-11}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.1\ten{-12}$
+\end_inset
+
+ (24%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.7\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.5\ten{-1}$
+\end_inset
+
+ (170%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.093$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the exponential distribution fit for the
+ lifetime histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The extracted value for 
+\begin_inset Formula $\tau_{0}$
+\end_inset
+
+ was compared with the one taken from the literature [4] resulting in: 
+\begin_inset Formula $N\sigma=8.3$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|\tau^{\k}-\tau_{theory}^{\k}\right|}{\tau_{theory}^{\k}}=66\%$
+\end_inset
+
+ which indicate that the extracted value is far from the theoretical one,
+ though the statistical parameters and graphs indicate a good fit was made.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Discussion
+\end_layout
+
+\begin_layout Standard
+\noindent
+Both mass and lifetime's theoretical distributions have been statistically
+ validated, and 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ is still the most common decay mode and occurs the majority of the time.
+ However, the branching ratios are different from the theoretical values.
+ In addition, both extracted values are far from their theoretical counterparts
+ to differing degrees.
+ 
+\begin_inset Formula $\k$
+\end_inset
+
+'s invariant mass histogram plummets, when a smooth transition is expected.
+ Possible causes for this drop are the filters and the simulation's track
+ recognition and fit, in the following ways.
+ There are 69 events with 2-3 tracks which may have a vertex between two
+ tracks, however these vertices do not include the two tracks with the highest
+ number of hits.
+ Were all 69 included it would have a profound effect on the histogram.
+ Another possible cause is if a track is counted twice.
+ Suppose tracks 1 and 2 have more hits than track 3 but track 1 is alongside
+ track 2 and is a result of a bug.
+ Then the vertex of tracks 1 and 2 which the analysis looks for either doesn't
+ exist and the event is thrown out, or the vertex exists and tracks 1 and
+ 2 have the same sign of curvature thus event is thrown out.
+ This likely accounts for many events with 3 tracks which were thrown out
+ after both prevalent curvatures had the same sign.
+ As these types of bugs are much more likely at higher energies the histogram
+ is missing higher mass values.
+ And as the lifetime is directly related to the invariant mass (See 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "lifetime calc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) it is clear why a warped invariant mass distribution leads to a warped
+ lifetime distribution.
+ The lifetime is dependent on other measurements which may have also been
+ adversely affected by the event filters and simulation.
+ Regardless, both the lifetime and invariant mass share the same scale as
+ their corresponding theoretical values.
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+ATLAS
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+The Data
+\end_layout
+
+\begin_layout Standard
+\noindent
+The particle data which is analysed during this part has been provided by
+ the ATLAS particle accelerator.
+ The data details detected electrons and positrons, their position in the
+ detector using the angles 
+\begin_inset Formula $\eta$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, the measured transverse momentum of each particle, and the confidence
+ of the detector that the particle is a positron or an electron using 3
+ Boolean values, 
+\begin_inset Quotes eld
+\end_inset
+
+Loose
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Medium
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Tight
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Loose
+\begin_inset Quotes erd
+\end_inset
+
+ represents that the detector is not very confident of the particle's type,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Medium
+\begin_inset Quotes erd
+\end_inset
+
+ is more confident and 
+\begin_inset Quotes eld
+\end_inset
+
+Tight
+\begin_inset Quotes erd
+\end_inset
+
+ is the most confident.
+ To get a meaningful measurement out of this limited data set some assumptions
+ concerning the decays must be made.
+ It is assumed that all electrons and positrons in the data set were formed
+ in a 
+\begin_inset Formula $X^{0}\to e^{-}e^{+}$
+\end_inset
+
+ decay, where 
+\begin_inset Formula $X^{0}$
+\end_inset
+
+ is the particle(s) to be identified.
+ Were it known which electrons and positrons came from an 
+\begin_inset Formula $X^{0}$
+\end_inset
+
+ decay, it may be possible to identify 
+\begin_inset Formula $X^{0}$
+\end_inset
+
+ by its invariant mass, using a Breit-Wigner fit on a histogram similarly
+ to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The identification is further simplified because of the assumed decay mode,
+ which implies 
+\begin_inset Formula $X^{0}$
+\end_inset
+
+ is not a lepton, is neutral and that such a decay mode exists.
+ As it is unknown which particles, and specifically, pairs came from which
+ decay, the invariant mass of 
+\begin_inset Formula $X^{0}$
+\end_inset
+
+ is calculated for all possible 
+\begin_inset Formula $e^{-}e^{+}$
+\end_inset
+
+ pairs in a particular event (i.e.
+ if an event contains the measurements of 3 particles, 
+\begin_inset Formula $e_{1}^{-}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{2}^{-}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{3}^{+}$
+\end_inset
+
+ the invariant masses 
+\begin_inset Formula $M_{1,3}^{X^{0}}$
+\end_inset
+
+, and 
+\begin_inset Formula $M_{2,3}^{X^{0}}$
+\end_inset
+
+ are calculated and associated with that event) all calculated masses are
+ added to the mass histogram.
+ One expects an 
+\begin_inset Formula $e^{-}e^{+}$
+\end_inset
+
+ pair which was not formed together will introduce noise into the mass histogram
+, this noise has no definite distribution function and is modeled at a later
+ stage.
+ On the other hand, an 
+\begin_inset Formula $e^{-}e^{+}$
+\end_inset
+
+ pair which formed in a 
+\begin_inset Formula $X^{0}\to e^{-}e^{+}$
+\end_inset
+
+ decay will contribute a mass which distributes according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with an invariant mass of 
+\begin_inset Formula $M^{X^{0}}$
+\end_inset
+
+.
+ Thus, a Breit-Wigner distribution with some background is expected.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Loose
+\begin_inset Quotes erd
+\end_inset
+
+ measurements are expected to have more noise than 
+\begin_inset Quotes eld
+\end_inset
+
+Medium
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Tight
+\begin_inset Quotes erd
+\end_inset
+
+, as they may contain particles which decayed in a decay mode with no 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+s or 
+\begin_inset Formula $e^{+}$
+\end_inset
+
+s, and thus, pairing the two only introduces noise.
+ The same is expected when comparing 
+\begin_inset Quotes eld
+\end_inset
+
+Medium
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+Tight
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Tight Electrons Histogram
+\series medium
+
+\begin_inset FormulaMacro
+\newcommand{\J}{J/\psi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\u}{\Upsilon(1S)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pairing only tight electrons, a histogram containing 900 bins was plotted,
+ with energies ranging between 
+\begin_inset Formula $1\,GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $150\,GeV$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Third Part/Tight.png
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tight electrons histogram.
+ Contains 900 bins with energies ranging from 1
+\begin_inset Formula $GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $150GeV$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Three peaks can be seen in the histogram: one at around 
+\begin_inset Formula $90GeV$
+\end_inset
+
+, one at about 
+\begin_inset Formula $9.5GeV$
+\end_inset
+
+ and one at about 
+\begin_inset Formula $3.1GeV$
+\end_inset
+
+.
+ Each of these peaks can be linked to a particle, where the rightmost resonance
+ at around 
+\begin_inset Formula $90GeV$
+\end_inset
+
+ corresponds the 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ boson, the resonance at around 
+\begin_inset Formula $9.5GeV$
+\end_inset
+
+ corresponds to the 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ meson and the resonance at about 
+\begin_inset Formula $3.1GeV$
+\end_inset
+
+ corresponds to the 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ meson.
+ 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Fit & Background Estimation
+\end_layout
+
+\begin_layout Standard
+\noindent
+To extract the masses of the particles from the histogram a fit needs to
+ be made and plotted.
+ However, fitting the surroundings of the resonances 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+of each of
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+of
+\begin_inset Quotes erd
+\end_inset
+
+.
+ re: fixed
+\end_layout
+
+\end_inset
+
+ according to the Breit-Wigner distribution to find a particle's mass would
+ prove wrong,
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+remove 
+\begin_inset Quotes eld
+\end_inset
+
+in order
+\begin_inset Quotes erd
+\end_inset
+
+ and maybe put a full stop.
+ re: don't agree, the full stop should be before re:re: I still think 
+\begin_inset Quotes eld
+\end_inset
+
+In order
+\begin_inset Quotes erd
+\end_inset
+
+ should be removed, the same goes for the last sentence
+\end_layout
+
+\end_inset
+
+ as there is irreducible background 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+remove 
+\begin_inset Quotes eld
+\end_inset
+
+an
+\begin_inset Quotes erd
+\end_inset
+
+ re: why? re:re: irreducible background is uncountable see (
+\begin_inset CommandInset href
+LatexCommand href
+name "https://english-at-home.com/grammar-there-some-any/"
+target "https://english-at-home.com/grammar-there-some-any/"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+ resulting from the pairing of one electron and one positron which are not
+ decay products of the same particle
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+of that particle
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+of the same particle
+\begin_inset Quotes erd
+\end_inset
+
+,fixed
+\end_layout
+
+\end_inset
+
+.
+ Therefore, a data driven background
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+nice re: thanks
+\end_layout
+
+\end_inset
+
+ estimation was used.
+ To estimate the background noise at the signal region (SR, where little
+ background noise has been detected and mainly signal exists), far enough
+ from the SR (where little signal has been detected and mainly background
+ noise exists), two control regions (CR) which surround the SR and contain
+ little signal and much noise were approximated.
+ Using both CRs,
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Using both CRs; re: I think it's clear re:re: I'll try to clarify
+\end_layout
+
+\end_inset
+
+ a fit has been made for the background noise around each of the resonances.
+ Using the fitted function, 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I'd shorten to 
+\begin_inset Quotes eld
+\end_inset
+
+Using the fitted function
+\begin_inset Quotes erd
+\end_inset
+
+; re: fixed, re:re: changed function fitted to fitted function
+\end_layout
+
+\end_inset
+
+ denoted by 
+\begin_inset Formula $BKG(M)$
+\end_inset
+
+ where M is the invariant mass, a final fit over the SR and the CRs
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The final fit is over CRs and SR; re: fixed
+\end_layout
+
+\end_inset
+
+ consisting of 
+\begin_inset Formula $BKG(M)$
+\end_inset
+
+ and a signal function (Breit-Wigner distribution fit) whose parameters
+ were fitted
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I'd change 
+\begin_inset Quotes eld
+\end_inset
+
+whose parameters need to be fitted
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+was made
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+will be made
+\begin_inset Quotes erd
+\end_inset
+
+; re: yea sounds better
+\end_layout
+
+\end_inset
+
+.
+ From the fit parameters the rest mass of the particle was then extracted
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I'd change to ;re: what? re:re: oops never finished :/
+\end_layout
+
+\end_inset
+
+.
+ According to these steps two fits were done, one for the resonance of the
+ 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ meson and the other for the resonance of the 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ meson.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+The 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ Meson
+\end_layout
+
+\begin_layout Standard
+\noindent
+The region of measurement (CRs+SR) is from 
+\begin_inset Formula $1\,GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $7\,GeV$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The region of measurement (or interest) is from 
+\begin_inset Formula $1\,GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $7\,GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The CR region to the left of the SR was bounded by 
+\begin_inset Formula $1\,GeV$
+\end_inset
+
+ & 
+\begin_inset Formula $2.58\,GeV$
+\end_inset
+
+ and the CR region to the right of the SR was bounded by 
+\begin_inset Formula $3.4\,GeV$
+\end_inset
+
+ & 
+\begin_inset Formula $7\,GeV$
+\end_inset
+
+.
+ That data was then fitted to a normal distribution of the form 
+\begin_inset Formula 
+\begin{equation}
+BKG^{J/\psi}(M)=A_{0}e^{-(\frac{M-A_{1}}{A_{2}})^{2}}+A_{3}\label{BKG FIT J\PSI}
+\end{equation}
+
+\end_inset
+
+Afterwards, a fit containing the BKG function was made to the data in the
+ region,
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+fixed the region problem
+\end_layout
+
+\end_inset
+
+ extracted from a histogram in that region containing 30 bins.
+ The fit is of the form 
+\begin_inset Formula 
+\begin{multline}
+FIT^{J/\psi}(M)=BKG^{J/\psi}(M)+\\
+BW(M;a^{J/\psi},\Gamma^{J/\psi},M_{0}^{J/\psi})\label{J\PSIFIT}
+\end{multline}
+
+\end_inset
+
+where 
+\begin_inset Formula $BW$
+\end_inset
+
+ is the Breit-Wigner distribution according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and where the parameters in 
+\begin_inset Formula $BKG^{J/\psi}(M)$
+\end_inset
+
+ are given from the previous fit.
+ The fit parameters and plot are given by (see Table 10 and Figure 7, for
+ the BKG function fit parameters see Appendix C)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Signal+BKG
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{J/\psi}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $230$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $130$
+\end_inset
+
+(57%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Gamma^{J/\psi}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.53\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.1\ten{-2}$
+\end_inset
+
+(27%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{0}^{J/\psi}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.111$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.9\ten{-2}$
+\end_inset
+
+(2.5%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.9\ten{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters of the signal+background fit in the range [
+\begin_inset Formula $1GeV,7GeV$
+\end_inset
+
+] for 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Third Part/SR_JPsi/fit_bkg_JPsi.png
+	scale 19
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of data(crosses), background fit (
+\begin_inset Formula $BKG^{J/\psi}$
+\end_inset
+
+, in red) and fit (
+\begin_inset Formula $FIT^{J/\psi}$
+\end_inset
+
+,in orange) in the range [
+\begin_inset Formula $1GeV,7GeV]$
+\end_inset
+
+ for the particle 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Comparing the invariant mass extracted from the fit, 
+\begin_inset Formula $M_{0}^{\J}$
+\end_inset
+
+, to that taken from the literature 
+\begin_inset Formula $M_{0_{theory}}^{J/\psi}=3.0969000\pm6.0\ten{-6}GeV$
+\end_inset
+
+ results in 
+\begin_inset Formula $N_{\sigma}=0.18$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|M_{0}^{J/\psi}-M_{0_{theory}}^{J/\psi}\right|}{M_{0_{theory}}^{J/\psi}}=0.45\%$
+\end_inset
+
+ indicating a close relation between the two values.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+The 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ Meson
+\end_layout
+
+\begin_layout Standard
+\noindent
+The region of measurement (CRs+SR) is from 
+\begin_inset Formula $5\,GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $15\,GeV$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The region of measurement (or interest) is from 
+\begin_inset Formula $5\,GeV$
+\end_inset
+
+ to 
+\begin_inset Formula $15\,GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The CR to the left of the SR 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+the SR
+\begin_inset Quotes erd
+\end_inset
+
+ sounds kinda weird, I think 
+\begin_inset Quotes eld
+\end_inset
+
+SR
+\begin_inset Quotes erd
+\end_inset
+
+ is better; re: what? re:re: fixed note
+\end_layout
+
+\end_inset
+
+ was bounded by 
+\begin_inset Formula $5GeV$
+\end_inset
+
+ & 
+\begin_inset Formula $8.34GeV$
+\end_inset
+
+ and the CR to the right of the SR was bounded by 
+\begin_inset Formula $11.02GeV$
+\end_inset
+
+ & 15
+\begin_inset Formula $GeV$
+\end_inset
+
+.
+ The data from both CRs was then fitted to an exponent of the form 
+\begin_inset Formula 
+\begin{equation}
+BKG^{\Upsilon(1S)}(M)=B_{0}e^{B_{1}M}+B_{2}\label{BKG FIT Ups}
+\end{equation}
+
+\end_inset
+
+Afterwards, a fit containing the BKG function was made to the data in the
+ entire region of measurement
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+to the...
+ (see next note)
+\end_layout
+
+\end_inset
+
+, extracted from a histogram in that region containing 30 bins.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+change 
+\begin_inset Quotes eld
+\end_inset
+
+bounded by 
+\begin_inset Formula $8.34GeV$
+\end_inset
+
+ & 
+\begin_inset Formula $11.02GeV$
+\end_inset
+
+ with data extracted from an histogram in that region containing 30 bins.
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+invariant mass histogram, with 30 bins, over the entire region
+\begin_inset Quotes erd
+\end_inset
+
+; fixed, kind of
+\end_layout
+
+\end_inset
+
+ The fit is of the form 
+\begin_inset Formula 
+\begin{multline}
+FIT^{\Upsilon(1S)}(M)=BKG^{\Upsilon(1S)}(M)+\\
+BW(M;a^{\Upsilon(1S)},\Gamma^{\Upsilon(1S)},M_{0}^{\Upsilon(1S)})\label{UPS FIT}
+\end{multline}
+
+\end_inset
+
+where 
+\begin_inset Formula $BW$
+\end_inset
+
+ is the Breit-Wigner distribution according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and where the parameters in 
+\begin_inset Formula $BKG^{\Upsilon(1S)}(M)$
+\end_inset
+
+ are given from the previous fit, just as for 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+just as for 
+\begin_inset Formula $\J$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ The fit parameters and plot are given by (see Table 11 and Figure 8, for
+ the BKG fit parameters see Appendix D)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Signal+BKG
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error(Relative Error)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{\Upsilon(1S)}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8100$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2600$
+\end_inset
+
+(32%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{0}^{\Upsilon(1S)}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.628$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.1\ten{-2}$
+\end_inset
+
+(0.74%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Gamma^{\Upsilon(1S)}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.0\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.3\ten{-1}$
+\end_inset
+
+(55%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.99$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.48$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+—
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters of the signal+background fit in the range [
+\begin_inset Formula $5GeV,15GeV$
+\end_inset
+
+] for 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Third Part/SR_UPS/fit_bkg_UPS.png
+	scale 19
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of data (crosses), background fit (
+\begin_inset Formula $BKG^{\Upsilon(1S)}$
+\end_inset
+
+, in red) and fit (
+\begin_inset Formula $FIT^{\Upsilon(1S)}$
+\end_inset
+
+,in orange) in the range [
+\begin_inset Formula $5GeV,15GeV$
+\end_inset
+
+] for the particle 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Comparing the invariant mass extracted from the fit, 
+\begin_inset Formula $M_{0}^{\Upsilon(1S)}$
+\end_inset
+
+, to that taken from the literature 
+\begin_inset Formula $M_{0_{theory}}^{\Upsilon(1S)}=9.46030\text{±}2.6\ten{-4}\,GeV$
+\end_inset
+
+ results in 
+\begin_inset Formula $N_{\sigma}=2.4$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|M_{0}^{\Upsilon(1S)}-M_{0_{theory}}^{\Upsilon(1S)}\right|}{M_{0_{theory}}^{\Upsilon(1S)}}=1.8\%$
+\end_inset
+
+ indicating a close relation between the two values.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\size normal
+Discussion
+\end_layout
+
+\begin_layout Standard
+\noindent
+Although the statistical values for the final fit of 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ are not ideal, it is evident the invariant mass is close to the theoretical
+ one.
+ Perhaps a change in the BKG function, or in the number of histogram bins
+ would have improved the fit.
+ Nevertheless, it remains true the fitted function describes both the signal
+ and the background noise in all regions adequately.
+ The same holds for 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+, whose distribution statistically validated the theory.
+ 
+\begin_inset Formula $\u$
+\end_inset
+
+'s extracted invariant mass is close, both by value and by estimated error,
+ to its theoretical counterpart.
+ However, the extracted invariant mass has turned out a little bigger than
+ it should have been.
+ The peak of the fitted function (see Figure 8) comes out to the right of
+ the histogram's peak, which in turn affects the invariant mass extracted
+ from the fit.
+ This may be resolved by a change to the histogram's resolution (bins) and
+ continued guesswork of the initial parameters.
+ Regardless, both fits came out well, yielding results comparable to those
+ in the literature.
+ 
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+Conclusions
+\end_layout
+
+\begin_layout Standard
+\noindent
+Starting with the simulation's calibration, the measured magnetic field
+ is of the same order as those used at the LHC [5].
+ And the conversion between the measured aggregated pulse-height to particle
+ energy was statistically validated.
+ Following the calibration, 
+\begin_inset Formula $\p$
+\end_inset
+
+'s invariant mass was extracted, resulting in 
+\begin_inset Formula $M_{0}^{\p}=1.3761\ten{-1}\pm7.1\ten{-4}\,GeV$
+\end_inset
+
+.
+ As mentioned in the relevant discussion, the value is close to the theoretical
+ one; however, 
+\begin_inset Formula $N\sigma$
+\end_inset
+
+ is outside of the desired range.
+ A possible explanation lies in the lack of lower mass events, which correlates
+ with the inability to distinguish between 2 separate clusters at smaller
+ scattering angles.
+ To distinguish between closer clusters one should inject 
+\begin_inset Formula $\p$
+\end_inset
+
+ at lower momenta, improve the E-Cal's sensitivity, its spatial resolution
+ and the simulation's ability to differentiate two overlapping clusters.
+ 
+\begin_inset Formula $\k$
+\end_inset
+
+'s invariant mass and lifetime were also extracted, resulting in 
+\begin_inset Formula $M_{0}^{\k}=4.42\ten{-1}\pm1.5\ten{-2}\,GeV$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau^{\k}=3.03\ten{-11}\pm7.1\ten{-12}\,s$
+\end_inset
+
+.
+ These values have the same scale as the theoretical ones, which are not
+ close to those extracted in this experiment.
+ This could be explained by the existence of bugs in the simulation, which
+ lead to the disposal of events with higher invariant masses.
+ Afterwards, using raw data from ATLAS, the mesons 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+,
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ and the boson 
+\begin_inset Formula $Z^{0}$
+\end_inset
+
+ were identified through the pairing of electrons and positrons detected
+ in each of the 900,000 events.
+ By applying a data driven estimation in order to account for the irreducible
+ background created as a result of wrong pairings of electrons and positrons,
+ the invariant masses of 
+\begin_inset Formula $J/\psi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Upsilon(1S)$
+\end_inset
+
+ were extracted; 
+\begin_inset Formula $M_{0}^{\Upsilon(1S)}=9.628\pm0.071\,GeV$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{0}^{J/\psi}=3.111\pm0.079\,GeV$
+\end_inset
+
+, both are close to their corresponding theoretical values.
+ Overall, despite the staggering amount of bugs encountered throughout the
+ experiment, satisfactory results has been achieved, proving the accuracy
+ and effectiveness of the applied experimental methods and theoretical knowledge.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\size normal
+Appendix
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size normal
+Appendix A 
+\series medium
+- GEANT3 Output From an 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ Injection At 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+ and :
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\family typewriter
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Graphics
+	filename TerminalInstractions.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation instructions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Graphics
+	filename Output.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation output after a 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ injection at 
+\begin_inset Formula $10\,GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GEANT3 Simulation instructions and output from a 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ injection at 10 
+\begin_inset Formula $GeV$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Simulated Path.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Example of an 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ injection event on the graphical display of the simulation.
+ It consists of three projections: a side view on the x-y plane, a top view
+ on the xz plane, and a front view of the EM calorimeter on the y-z plane.
+ The particles are injected in the positive x direction, and the magnetic
+ field is parallel to the z coordinate.
+ The display includes the axis orientation, and scales for each projection.
+ The crosses stand for the hits in the drift chambers (the magnetic spectrometer
+, or the muon chambers).
+ The size of the circles in the EM calorimeter is proportional to the pulse
+ height in the corresponding BGO crystal.
+ [1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size normal
+Appendix B
+\series medium
+ - Statistical Values of The Calibration Fits
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calibration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spectrometer Calibration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Electrons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.40$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.42$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E-Cal Calibration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Electrons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.5E-03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.5E-03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Statistical values of the calibration fits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size normal
+Appendix C
+\series medium
+ - BKG Fit Parameters of 
+\begin_inset Formula $\J$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BKG(
+\begin_inset Formula $\J$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relative Error
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{0}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $199.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.9\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{1}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.135$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.090$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.2\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{2}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.58$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.11$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.9\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{3}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $54.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.0\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.032$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters of the background fit in CR for 
+\begin_inset Formula $\J$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size normal
+Appendix D 
+\series medium
+- BKG Fit Parameters of 
+\begin_inset Formula $\u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BKG(
+\begin_inset Formula $\u$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relative Error
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{0}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $450$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $560$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $120\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}[\unitfrac{1}{GeV}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.48$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $46\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $73.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.5\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi_{red}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.95$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.52$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+——
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters of the background fit in CR for 
+\begin_inset Formula $\u$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size normal
+Appendix E
+\series medium
+ - Calculation of 
+\begin_inset Formula $\k$
+\end_inset
+
+'s Momentum
+\end_layout
+
+\begin_layout Standard
+\noindent
+The momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ of 
+\begin_inset Formula $\k$
+\end_inset
+
+ will be calculated using momentum conservation in the lab's frame of reference.
+ If 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the angles of 
+\begin_inset Formula $\overrightarrow{p}_{\pi^{+}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overrightarrow{p}_{\pi^{-}}$
+\end_inset
+
+ relative to 
+\begin_inset Formula $\overrightarrow{p}$
+\end_inset
+
+ respectively (see Figure 11), then, using the angle of the vertex, 
+\begin_inset Formula $\vp=\alpha+\beta$
+\end_inset
+
+.
+ Using conservation of 3-momentum perpendicular to 
+\begin_inset Formula $\overrightarrow{p}$
+\end_inset
+
+, one gets 
+\begin_inset Formula $\abs{p_{\pi^{+}}}sin(\alpha)=\abs{p_{\pi^{-}}}sin(\beta)$
+\end_inset
+
+.
+ By combining the two one gets 
+\begin_inset Formula $tan(\beta)=\frac{\abs{p_{\pi^{+}}}sin(\vp)}{\abs{p_{\pi^{+}}}cos(\vp)+\abs{p_{\pi^{-}}}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha=\vp-\beta$
+\end_inset
+
+, both of which can be calculated using the measured momenta from invariant
+ mass calculation.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ is then 
+\begin_inset Formula $p=\abs{p_{\pi^{+}}}cos(\alpha)+\abs{p_{\pi^{-}}}cos(\beta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename K_s decay drawing.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\k$
+\end_inset
+
+ decay into 
+\begin_inset Formula $\pi^{+}$
+\end_inset
+
+
+\begin_inset Formula $\pi^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+
+\size large
+References
+\end_layout
+
+\begin_layout Standard
+\noindent
+[1] G.Bella , E.Etzion, Simulation of a High Energy Detector for Undergraduate
+ Physics Students ,School of Physics and Astronomy, Raymond and Beverly
+ Sackler Faculty of Exact Sciences, Tel Aviv University, 1994.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[2] A.Das, T.Ferbel, Introduction to Nuclear and Particle Physics, 2nd edition,
+ World Scientific Publishing Co.
+ Pte.Ltd, 2005.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[3] D.H.Perkins, Introduction to High Energy Physics, 4th edition, Cambridge
+ University Press, 2000.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[4] P.A.
+ Zyla et al.
+ Particle Data Group, Prog.
+ Theor.
+ Exp.
+ Phys.
+ 2020, 083C01 (2020) and 2021 update <https://pdg.lbl.gov/>.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[5] CERN , Pulling together: Superconducting electromagnets.
+ <https://home.cern/science/engineering/pulling-together-superconducting-electrom
+agnets>, 2020.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

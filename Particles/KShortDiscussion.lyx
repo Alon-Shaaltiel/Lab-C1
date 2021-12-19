@@ -1,0 +1,1579 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multirow}
+\multirow{number of rows}{cell width}{cell entry}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\p}{\pi^{0}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ten}[1]{\cdot10{}^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\k}{K_{S}^{0}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vp}{\varphi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Discussion
+\end_layout
+
+\begin_layout Standard
+The results are in clear agreement with the theory and are statisticly significa
+nt.
+ However, there is still a glaring problem which has not been addressed.
+\end_layout
+
+\begin_layout Standard
+There is a discrepancy between the fit line and number of events at the
+ lower range of the mass spectrum.
+ A possible cause for this discrepancy is our method of measurement, specificall
+y how the angle between the photons is measured.
+ The method requires 2 distinct pulse-height clusters, which means the sum
+ of the showers' widths must be smaller than the distance between them.
+ For a suffieciently energetic particle or a small enough angle, 2 clusters
+ are impossible.
+ This, in turn, means that below a certain angle measurements are much more
+ likely to be discarded.
+ Noting the fact that the invariant mass squared is proportional to 
+\begin_inset Formula $1-\cos\theta$
+\end_inset
+
+, it is clear why our measurements are lacking in events with a small invariant
+ mass.
+ Future pairs attempting to recreate our experiment should check, using
+ the tools provided (Link to code), which momentum, after filtering, gives
+ the most satisfactory histogram.
+\end_layout
+
+\begin_layout Section
+Measurements concerning 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The meson 
+\begin_inset Formula $\k$
+\end_inset
+
+ is made up of 
+\begin_inset Formula $d\,\bar{s}$
+\end_inset
+
+ pair.
+ Its invariant mass is 
+\begin_inset Formula $M_{PDG}^{\k}=4.97611\ten{-1}\pm1.3\ten{-5}\,GeV$
+\end_inset
+
+ (PDG for K neutral, which is the actual particle) and its mean lifetime
+ is 
+\begin_inset Formula $\tau_{\k}=8.9564\ten{-11}\pm3.3\ten{-14}\,s$
+\end_inset
+
+.
+ The lifetime, 
+\begin_inset Formula $c\tau_{\k}=2.6844\,cm$
+\end_inset
+
+ is of the same order as the spectrometer's resolution, meaning the particle
+ decays along the path from the injection point to the E-Cal.
+ 
+\begin_inset Formula $\k$
+\end_inset
+
+'s two most common decay modes, which together occur 
+\begin_inset Formula $99.9\%$
+\end_inset
+
+ of the time, are 
+\begin_inset Formula $\k\rightarrow\p\p\,(30.7\%)$
+\end_inset
+
+ and 
+\begin_inset Formula $\k\rightarrow\pi^{+}\pi^{-}\,(69.2\%)$
+\end_inset
+
+ (PDG).
+ This experiment will not consider any other decay modes.
+ As was mentioned in the previous section, 
+\begin_inset Formula $\p$
+\end_inset
+
+ decays instantaneously (when compared with the resolution of the spectrometer)
+ via 
+\begin_inset Formula $\p\rightarrow2\gamma$
+\end_inset
+
+.
+ Photons or 
+\begin_inset Formula $\p$
+\end_inset
+
+ particles leave no trace in the spectrometer which renders locating the
+ vertex of the decay impossible or nearly impossible.
+ The vertex of the decay is necessary in the calculation of the lifetime,
+ which, theortically, should be measurable using a different decay mode.
+ If one looks at 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ which have an elemetary charge corresponding to their sign and a lifetime
+ of 
+\begin_inset Formula $c\tau_{\pi^{\pm}}=7.8045\,m$
+\end_inset
+
+ (PDG) which is significantly greater than the length of the measurement
+ apparatus, and so, it is assumed they do not decay.
+ As 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ are hadrons they do not deposit their entire energy inside the E-Cal and
+ their momentum must be measured in some other way.
+ The 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ particles are charged and therefore have their trajectories curved by the
+ magnetic field and leave a trace in the spectrometer.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the curvature outputted by the simulation, it is possible to measure
+ the transverse momentum of each particle.
+ Using conservation of 3-momentum, the angle between the particles at the
+ decay vertex, and the position of the vertex, it is possible to calculate
+ both the invariant mass and the lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+.
+ It is clear then that this is the decay mode of interest.
+ As with the previous section, some events make measurement impossible or
+ incorrect, if produced by a bug in the simulation, thus, an 
+\begin_inset Quotes eld
+\end_inset
+
+interesting event
+\begin_inset Quotes erd
+\end_inset
+
+ must be defined, all other events (excluding those which did not register
+ in any detector) will be counted and promptly discarded.
+ An 
+\begin_inset Quotes eld
+\end_inset
+
+interesting event
+\begin_inset Quotes erd
+\end_inset
+
+ will have 2-3 tracks (which are identified by the simulation), opposite
+ curvatures in the chosen tracks (if there are 3) and the tracks must share
+ a vertex.
+ In case there are 3 tracks, the two tracks with the most hits are taken.
+ In order to compare the branching ratio of the different decay modes to
+ the theoretical value each event is classified into 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+, 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ or 
+\begin_inset Formula $BUG$
+\end_inset
+
+.
+ A 
+\begin_inset Formula $BUG$
+\end_inset
+
+ is an event with more than 
+\begin_inset Formula $5$
+\end_inset
+
+ pulse-height clusters or with no interaction with the E-Cal and spectrometer.
+ These events are discarded without being considered in the branching ratio,
+ they account for 
+\begin_inset Formula $26\%$
+\end_inset
+
+ of the events.
+ As it is simpler to define what a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ event registers, it is assumed that all events which are not a 
+\begin_inset Formula $BUG$
+\end_inset
+
+ or a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ are 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ events.
+ And so, a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ event is expected to have a pulse-height cluster(s) and no track.
+ In the simulation, 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ account for 
+\begin_inset Formula $77\%$
+\end_inset
+
+ of events (or 
+\begin_inset Formula $57\%$
+\end_inset
+
+ if a 
+\begin_inset Formula $BUG$
+\end_inset
+
+ event is not considered a 
+\begin_inset Formula $\k\to\p\p$
+\end_inset
+
+ event but is counted), thus, 
+\begin_inset Formula $\k\to\pi^{+}\pi^{-}$
+\end_inset
+
+ account for 
+\begin_inset Formula $23\%$
+\end_inset
+
+ of events.
+ This finding contradicts the theortical branching ratios, which are the
+ exact opposite in terms of decay mode prominance.
+\end_layout
+
+\begin_layout Subsection
+Invariant Mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ will be measured using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The mass of 
+\begin_inset Formula $\pi^{\pm}$
+\end_inset
+
+ is 
+\begin_inset Formula $M_{th}^{\pi^{\pm}}=1.395704\ten{-1}\pm1\ten{-7}\,GeV$
+\end_inset
+
+, and their momenta will be calculated using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "spectrometer"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the calibration, the angle between the particles is given by the simulation
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+Phi
+\begin_inset Quotes erd
+\end_inset
+
+ at the vertex.
+\end_layout
+
+\begin_layout Subsubsection
+Mass Distribution of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2015 
+\begin_inset Formula $\k$
+\end_inset
+
+ were injected into the detector with a momentum of 
+\begin_inset Formula $64\,GeV$
+\end_inset
+
+ (according to the simulation).
+ Out of the 2015 events, 
+\begin_inset Formula $88.9\%$
+\end_inset
+
+ were discarded and the remaining 
+\begin_inset Formula $11.1\%$
+\end_inset
+
+ (224 events) were used to calculate the invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ was calculated using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Decay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Afterwards, a histogram with 120 bins (including empty bins), each with
+ width of 
+\begin_inset Formula $3.2\ten{-2}\,GeV$
+\end_inset
+
+ was made.
+ The average mass in each bin was then taken as the representing measurement
+ of that bin.
+ Just as with 
+\begin_inset Formula $\p$
+\end_inset
+
+ the invariant mass should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "BW"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and so, a fit of the form presented in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ was made.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Second Part/Mass fit/K_short/bw_fitting.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Breit-Wigner distribution fit for the mass histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameter are as follows (see Table 9)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relative Error
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}[\unitfrac{Events}{GeV^{2}]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.62\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.3\ten{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $13\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.512\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.1\ten{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.6\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}[GeV]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.10\ten{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.9\ten{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.1\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.42$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.99$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the BW distribution fit for the mass histogram
+ of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Using the fit parameters and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "B-W fit pi0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the invariant mass of 
+\begin_inset Formula $\k$
+\end_inset
+
+ was extracted 
+\begin_inset Formula 
+\[
+M_{0}^{\k}=4.512\ten{-1}\pm7.1\ten{-3}\,GeV\,(1.6\%\,error)
+\]
+
+\end_inset
+
+The extracted value was then compared with the one taken from the literature
+ (PDG) resulting in: 
+\begin_inset Formula $N\sigma=6.5$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|M_{0}^{\k}-M_{th}^{\k}\right|}{M_{th}^{\k}}=10\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The statistics clearly show a good correlation with the theory but may point
+ to an over-estimation of error.
+ The metrics however, show that the measured values are far from the theortical
+ values compared to their error and value.
+\end_layout
+
+\begin_layout Subsection
+Lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+ will be calculated using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lifetime calc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Each event has a measured invariant mass which will be used.
+ The length 
+\begin_inset Formula $L$
+\end_inset
+
+ is calculated using the vertex's position after adding 
+\begin_inset Formula $10\,cm$
+\end_inset
+
+ to the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis since the injection point is at 
+\begin_inset Formula $x=-10\,cm$
+\end_inset
+
+, 
+\begin_inset Formula $L=\sqrt{(x+10)^{2}+y^{2}+z^{2}}$
+\end_inset
+
+.
+ The momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ will be calculated using 3-momentum conservation in the lab's frame of
+ reference.
+ If 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the angles of 
+\begin_inset Formula $\vec{p_{\pi^{+}}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{p_{\pi^{-}}}$
+\end_inset
+
+ relative to 
+\begin_inset Formula $\vec{p}$
+\end_inset
+
+ respectively, then, using the angle of the vertex, 
+\begin_inset Formula $\vp=\alpha+\beta$
+\end_inset
+
+.
+ Using conservation of 3-momentum perpendicular to 
+\begin_inset Formula $\vec{p}$
+\end_inset
+
+, one gets 
+\begin_inset Formula $\abs{p_{\pi^{+}}}sin(\alpha)=\abs{p_{\pi^{-}}}sin(\beta)$
+\end_inset
+
+.
+ By combining the two one gets 
+\begin_inset Formula $tan(\beta)=\abs{p_{\pi^{+}}}sin(\vp)/(\abs{p_{\pi^{+}}}cos(\vp)+\abs{p_{\pi^{-}}})$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha=\vp-\beta$
+\end_inset
+
+, both of which can be calculated using the measured momenta from invariant
+ mass calculation.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ is then 
+\begin_inset Formula $p=\abs{p_{\pi^{+}}}cos(\alpha)+\abs{p_{\pi^{-}}}cos(\beta)$
+\end_inset
+
+.
+ A histogram with 20 bins (including empty bins), each with width of 
+\begin_inset Formula $1.3\ten{-9}\,s$
+\end_inset
+
+ was made.
+ The average lifetime in each bin was then taken as the representing measurement
+ of that bin.
+ The number of events in each bin should distribute according to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lifetime distribution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Therefore, an exponential fit of the form 
+\begin_inset Formula 
+\begin{equation}
+Events_{\k}(\tau)=a_{0}e^{-\frac{\tau}{\tau_{0}}}+a_{2}\label{expo fit - kShort}
+\end{equation}
+
+\end_inset
+
+was made, where 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ is the normalization factor and 
+\begin_inset Formula $\tau_{0},a_{2}$
+\end_inset
+
+ represent the invariant mass of 
+\begin_inset Formula $\p$
+\end_inset
+
+, 
+\begin_inset Formula $M_{0}^{\p}$
+\end_inset
+
+and the energy width, 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fit/Second Part/Mass fit/K_short/tau_fitting.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exponential distribution fit for the lifetime histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The fit parameter are as follows (see Table 9)
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\backslash
+Statistic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relative Error
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{0}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $320$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $83$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $26\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{0}[s]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.646\ten{-9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.903\ten{-10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $11\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}[Events]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.894$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.258$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $29\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.41$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{value}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.93$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+———
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit parameters and statistics of the exponential distribution fit for the
+ lifetime histogram of 
+\begin_inset Formula $\k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Using the fit parameters and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "expo fit - kShort"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the lifetime of 
+\begin_inset Formula $\k$
+\end_inset
+
+ was extracted 
+\begin_inset Formula 
+\[
+\tau^{\k}=5\ten{-12}\pm7.1\ten{-3}\,GeV\,(1.6\%\,error)
+\]
+
+\end_inset
+
+The extracted value was then compared with the one taken from the literature
+ (PDG) resulting in: 
+\begin_inset Formula $N\sigma=6.5$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\left|\tau^{\k}-\tau_{th}^{\k}\right|}{\tau_{th}^{\k}}=10\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The statistics clearly show a good correlation with the theory but may point
+ to an over-estimation of error.
+ The metrics however, show that the measured values are far from the theortical
+ values compared to their error and value.
+\end_layout
+
+\begin_layout Subsection
+Discussion
+\end_layout
+
+\begin_layout Standard
+As both 
+\begin_inset Formula $\k$
+\end_inset
+
+ fits have good statistical parameters, the theory concerning the distributions
+ is validated.
+ However, as both mass and lifetime measurements are a way off, both in
+ terms of deviations and relative distance, there may be major problems
+ with the approach, assumptions or apparatus.
+ To aid locating the the problematic assumptions, faults or analysis, many
+ events with momenta varying in scale were analysied.
+ The results show that at low enough momenta both mass and lifetime do not
+ distribute according to their respective theoretical distribution functions.
+ The distribution improves as momentum rises, with the most defined(?) distribut
+ions at 500 GeV.
+ Momenta which do not suffer the warping that happens at lower momenta ranges
+ show similiar results with many longer lifetimes and higher invariant mass
+ events missing from the expected distribution.
+ A major difference between the momenta is the branching ratio and percentage
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+interesting events
+\begin_inset Quotes erd
+\end_inset
+
+, while at 
+\begin_inset Formula $18\,GeV$
+\end_inset
+
+ the branching ratio 
+\begin_inset Formula $\k\to\pi^{0}\p$
+\end_inset
+
+ is 49% before removing bugs (10%) and 55% afterwards, at 
+\begin_inset Formula $64\,GeV$
+\end_inset
+
+ the branching ratio is 57% before removing bugs (26%) and 77% afterwards,
+ and most noticably, at 
+\begin_inset Formula $500\,GeV$
+\end_inset
+
+ the branching ratio is 60% before removing bugs (27%) and 83% afterwards.
+ More importantly, at 
+\begin_inset Formula $18\,GeV$
+\end_inset
+
+ 29% of events were 
+\begin_inset Quotes eld
+\end_inset
+
+interesting
+\begin_inset Quotes erd
+\end_inset
+
+, at 
+\begin_inset Formula $64\,GeV$
+\end_inset
+
+ 11% were 
+\begin_inset Quotes eld
+\end_inset
+
+interesting
+\begin_inset Quotes erd
+\end_inset
+
+ and at 
+\begin_inset Formula $500\,GeV$
+\end_inset
+
+ only 1.4% were 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Points of discussion: 1.
+ Statistical significance validates the distribution, 2.
+ Many momentums were tested with similair results and worse branching ratios,
+ 3.
+ Larger amounts of events were tried as well to no avail, 4.
+ The mass distribution suggets we are missing many higher energies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+literal "false"
+
+\end_inset
+
+D.
+ H.
+ Perkins, “Introduction to High Energy Physics”, 4th Edition, Cambridge
+ University Press, 2000.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+literal "false"
+
+\end_inset
+
+A.
+ Das, T.
+ Ferbel, “Introduction to Nuclear and Particle Physics”, 2nd Edition, World
+ Scientific Publishing Co.
+ Pte.
+ Ltd., 2003.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+literal "false"
+
+\end_inset
+
+G.Bella, E.
+ Etzion, “Simulation of a High Energy Detector for Undergraduate Physics
+ Students”, Tel Aviv University, Faculty of Exact Sciences, 1994.
+\end_layout
+
+\end_body
+\end_document
