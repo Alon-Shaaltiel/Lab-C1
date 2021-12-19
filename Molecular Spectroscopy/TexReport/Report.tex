@@ -209,7 +209,7 @@ The fit parameters extracted from the linear fit can be seen in Table 1
 \begin{tabular}{ |p{2cm}||p{2cm}|p{2cm}|  }
  \hline
  \multicolumn{3}{|c|}{Fit Parameters of Ethanol Calibration Graph} \\ \hline
- Parameter& Value &Error (Relative Error)\\ \hline
+ Parameter & Value &Error (Relative Error)\\ \hline
  $a_{0}$[$1$]    &$11.7$    &$9.3$($79\%$) \\
  $a_{1}$[$cm$] &$7.3$    & $1.4$ ( $19\%$)  \\ \hline
 \end{tabular}
@@ -254,7 +254,9 @@ For each sample width the area with the clearest sine wave in the absorption spe
     \caption{IR absorbance spectrum and sine fit to the selected region for a width of $29.2\ [\mu m]$}
     \centering
 \end{figure}
+
 Fitting a linear function between the width and the frequency yielded the following (See Figure \ref{fig:ThinLinWidthFreq})
+
 \begin{figure}[h]
     \label{fig:ThinLinWidthFreq}
     \includegraphics[width=\linewidth]{Images/__linear_fit.png}
@@ -262,6 +264,17 @@ Fitting a linear function between the width and the frequency yielded the follow
     \centering
 \end{figure}
 
+The fit parameters of the linear fit can be seen in Table \ref{tbl:WidthFit}
+\begin{table}[h]
+    \begin{tabular}{ |p{2cm}||p{2cm}|p{2cm}|  }
+     \hline
+     \multicolumn{3}{|c|}{Fit Parameters of Ethanol Calibration Graph} \\ \hline
+     Parameter & Value &Error (Relative Error)\\ \hline
+     $a_{0}$[$1$]    &$11.7$    &$9.3$($79\%$) \\
+     $a_{1}$[$cm$] &$7.3$    & $1.4$ ( $19\%$)  \\ \hline
+    \end{tabular}
+    \caption{\label{tbl:WidthFit}Fit parameters of the sample width vs fitted frequency graph}
+    \end{table}
 \bibliography{Report}
 
 \end{document}
