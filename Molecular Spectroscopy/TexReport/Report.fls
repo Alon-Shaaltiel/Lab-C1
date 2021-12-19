@@ -1,16 +1,16 @@
-PWD c:\Users\alon4\Dropbox\Labs\Lab C1\Molecular Spectroscopy\TexReport
-INPUT C:\Users\alon4\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\alon4\Dropbox\Labs\Lab C1\Molecular Spectroscopy\TexReport\Report.tex
+PWD c:\Users\Oren Kereth\Dropbox\Lab-C1\Molecular Spectroscopy\TexReport
+INPUT C:\Users\Oren Kereth\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Oren Kereth\Dropbox\Lab-C1\Molecular Spectroscopy\TexReport\Report.tex
 OUTPUT Report.log
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\revtex4-2.cls
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\revtex4-2.cls
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\aps4-2.rtx
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\aps4-2.rtx
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\aps4-2.rtx
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\aps10pt4-2.rtx
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\aps10pt4-2.rtx
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcase.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revtex4-2.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revtex4-2.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps4-2.rtx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps4-2.rtx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps4-2.rtx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps10pt4-2.rtx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\aps10pt4-2.rtx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
@@ -27,10 +27,10 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\revsymb4-2.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\revtex\revsymb4-2.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revsymb4-2.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\revtex\revsymb4-2.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
@@ -49,17 +49,35 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\chngcntr\chngcntr.sty
-INPUT C:\Users\alon4\AppData\Roaming\MiKTeX\2.9\tex\latex\chngcntr\chngcntr.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty
 INPUT Report.aux
 INPUT Report.aux
 OUTPUT Report.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
 OUTPUT ReportNotes.bib
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
@@ -67,7 +85,6 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt9.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti9.tfm
-INPUT Images\Thin film.png
 INPUT .\Images\Thin film.png
 OUTPUT Report.pdf
 INPUT .\Images\Thin film.png
@@ -97,13 +114,12 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\alon4\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Users\Oren Kereth\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT Images\INTERFEROMETER.png
 INPUT .\Images\INTERFEROMETER.png
 INPUT .\Images\INTERFEROMETER.png
 INPUT .\Images\INTERFEROMETER.png
 INPUT .\Images\INTERFEROMETER.png
-INPUT Images\FTIR LAYOUT.png
 INPUT .\Images\FTIR LAYOUT.png
 INPUT .\Images\FTIR LAYOUT.png
 INPUT .\Images\FTIR LAYOUT.png
