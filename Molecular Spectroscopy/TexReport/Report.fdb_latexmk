@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Report"] 1639922854 "Report.aux" "Report.bbl" "Report" 1639922857
+["bibtex Report"] 1639922854 "Report.aux" "Report.bbl" "Report" 1639929416
   "C:/Users/alon4/AppData/Roaming/MiKTeX/2.9/bibtex/bst/revtex4/apsrev.bst" 996869460 44155 dc7233506a001aedcd59cfd90f9fe8d7 ""
-  "Report.aux" 1639922856 5970 3015ec0c3f1dcecfaac8d671153c75c9 "pdflatex"
+  "Report.aux" 1639929415 5970 3015ec0c3f1dcecfaac8d671153c75c9 "pdflatex"
   "Report.bib" 1639917705 1806 19fb665b096d270139235133b8bd4904 ""
-  "ReportNotes.bib" 1639922855 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ReportNotes.bib" 1639929414 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Report.bbl"
   "Report.blg"
-["pdflatex"] 1639922855 "c:/Users/alon4/Dropbox/Labs/Lab C1/Molecular Spectroscopy/TexReport/Report.tex" "Report.pdf" "Report" 1639922857
+["pdflatex"] 1639929413 "c:/Users/alon4/Dropbox/Labs/Lab C1/Molecular Spectroscopy/TexReport/Report.tex" "Report.pdf" "Report" 1639929416
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1233951848 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -107,10 +107,10 @@
   "Images/__linear_fit.png" 1639847647 37202 3f39696043dc440f95e617f3d0df4f25 ""
   "Images/linear_fittingethanol.png" 1639827922 23805 ac057e066534c9fd0df37df3a2773278 ""
   "Images/polynomial_3_fitting.png" 1639918115 25058 6f08864922169e4b04c7d30ac42af21c ""
-  "Report.aux" 1639922856 5970 3015ec0c3f1dcecfaac8d671153c75c9 "pdflatex"
+  "Report.aux" 1639929415 5970 3015ec0c3f1dcecfaac8d671153c75c9 "pdflatex"
   "Report.bbl" 1639922854 3081 d89ecde181f16881e70de8d9ccd72269 "bibtex Report"
-  "Report.tex" 1639922850 21374 9cfeb87e8ce7b95926228a15885d517e ""
-  "c:/Users/alon4/Dropbox/Labs/Lab C1/Molecular Spectroscopy/TexReport/Report.tex" 1639922850 21374 9cfeb87e8ce7b95926228a15885d517e ""
+  "Report.tex" 1639929412 21406 44fb9685887dd3c6f04b11438a890a96 ""
+  "c:/Users/alon4/Dropbox/Labs/Lab C1/Molecular Spectroscopy/TexReport/Report.tex" 1639929412 21406 44fb9685887dd3c6f04b11438a890a96 ""
   (generated)
   "Report.aux"
   "Report.log"
