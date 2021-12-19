@@ -218,14 +218,14 @@ The fit parameters extracted from the linear fit can be seen in Table 1
 The concentration of ethanol in other mixtures was then found by numerically calculating the total absorption in the relevant range and plugging it in the linear equation using the fit parameters. Using the fit parameters from Table 1 the concentrations in a Suktinis and two unknown alcoholic beverages were found (see Table 2).
 
 \begin{table}[h]
-\begin{tabular}{ |p{2.8cm}||p{2.8cm}|p{2.8cm}|  }
+\begin{tabular}{ |p{2.8cm}|p{2.8cm}|p{2.8cm}|  }
  \hline
  \multicolumn{3}{|c|}{Ethanol Concentration in Different Beverages} \\
  \hline
  Beverage& Concentration(\%) &Concentration Error (Relative Error) \\ \hline
-Sukinis    &$54.3$  &$8.3$ ($15\%$) \\
-Unknown 1 &$40.5 $  &$5.7$  ($14\%$) \\
-Unknown 2  &$72$     & $12$ ( $17\%$) \\ \hline
+Sukinis    &$54.3$   &$8.3$ ($15\%$) \\
+Unknown 1  &$40.5$   &$5.7$ ($14\%$) \\
+Unknown 2  &$72$     & $12$ ($17\%$) \\ \hline
 \end{tabular}
 \caption{\label{beverages table}Ethanol concentration in different beverages}
 \end{table}
@@ -255,7 +255,7 @@ For each sample width the area with the clearest sine wave in the absorption spe
     \centering
 \end{figure}
 
-Fitting a linear function between the width and the frequency yielded the following (See Figure \ref{fig:ThinLinWidthFreq})
+Fitting a linear function between the width and the frequency of the associated sine yielded the following (See Figure \ref{fig:ThinLinWidthFreq})
 
 \begin{figure}[h]
     \label{fig:ThinLinWidthFreq}
@@ -266,7 +266,7 @@ Fitting a linear function between the width and the frequency yielded the follow
 
 The fit parameters of the linear fit can be seen in Table \ref{tbl:WidthFit}
 \begin{table}[h]
-    \begin{tabular}{ |p{2cm}||p{2cm}|p{2cm}|  }
+    \begin{tabular}{ |p{2cm}|p{2cm}|p{3.3cm}|  }
      \hline
      \multicolumn{3}{|c|}{Fit Parameters of Width vs. Frequency} \\ \hline
      Parameter & Value & Error (Relative Error)\\ \hline
@@ -274,7 +274,25 @@ The fit parameters of the linear fit can be seen in Table \ref{tbl:WidthFit}
      $a_{1}$[$1$]   &$3.080$    &$0.060$ ($1.9\%$)  \\ \hline
     \end{tabular}
     \caption{\label{tbl:WidthFit}Fit parameters of the sample width vs fitted frequency graph}
-    \end{table}
+\end{table}
+
+Using equation \ref{eq:ThinDiffWavenum}, the extracted refractive index is
+\begin{equation}
+    n = \frac{a_1}{2} = 1.540 \pm 0.030
+\end{equation}
+Which is in the general area of plastics' refractive indices \cite{plasticRefract}. This is an average over the range of wave lengths in the interferogram and so, pinpointing which plastic in particular is used is impossible from the refractive index alone. Using the IR spectrum to further narrow down options may be possible, but is out of the scope of this paper.
+Using the calibrated correlation between sample width and sine frequency, the widths of three samples, whose widths were not measured but had an interferogram projected through them were approximated and can be seen in table \ref{tbl:ThinMissingWidths}.
+\begin{table}[h]
+    \begin{tabular}{ |p{2.3cm}|p{3cm}|p{3cm}|  }
+     \hline
+     \multicolumn{3}{|c|}{Fit Parameters of Width vs. Frequency} \\ \hline
+     Filename & Frequency & Width\\ \hline
+     Unknown  &$122.85\pm0.26$ [$cm$]      &$39.10\pm0.90$ [$cm$]\\ 
+     Unknown E &$163.02\pm0.74$ [$cm$]      &$52.1\pm1.1$ [$cm$]\\ 
+     Unknown cpp-c&$142.24\pm0.51$ [$cm$]      &$45.4\pm1.0$ [$cm$]\\ \hline
+    \end{tabular}
+    \caption{\label{tbl:ThinMissingWidths}Calculated missing sample widths using the calibration between fitted frequency and sample width}
+\end{table}
 \bibliography{Report}
 
 \end{document}
