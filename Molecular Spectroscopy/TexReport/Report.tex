@@ -47,7 +47,20 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 % \renewcommand{\thefigure}{\arabic{figure}}
 
 \section{Introduction}
-In this experiment the Fourier Transform Infra Red spectrometer (FTIR) will be used extensively to extract the IR spectra of various materials and compounds. Let us start with a short historical review. In 1800 IR was recognized as a distinct region of the energy spectrum by Sir William Herschel, however the study of IR light with various materials started about 100 years later. In 1903, William W.Coblentz measured the IR spectra of hundreds of inorganic and organic compounds. As a result of increasing interest in the field, the first prototypes of IR spectroscopy were built in the 1930s.  In 1949 the astrophysicist Peter Fellgett used an interferometer to measure light from celestial bodies and produced the first Fourier transform infrared spectrum, however this method was still limited and took many hours to compute. In the late 1960s commercial FTIR spectrometers appeared because microcomputers were able to do the Fourier transform, however they were large and expensive. Over time, technology reduced the costs, increased availability and enhanced the capabilities of FTIR spectroscopy systems\cite{spechistory}
+In this experiment the Fourier Transform Infra Red spectrometer (FTIR) will be used extensively to extract the IR 
+% We never said what IR is outside of FTIR
+spectra of various materials and compounds. 
+Let us start with a short historical review.
+% Change to "A short historical overview is presented for the reader, for more information see References."
+In 1800 IR was recognized as a distinct region of the energy spectrum by Sir William Herschel, however the study of IR light with various materials started about 100 years later. In 1903, William W.Coblentz measured the IR spectra of hundreds of inorganic and organic compounds.
+% Why did he measure them?
+As a result of increasing interest in the field, the first prototypes of IR spectroscopy were built in the 1930s.  In 1949 the astrophysicist Peter Fellgett used an interferometer to measure light from celestial bodies and produced the first Fourier transform infrared spectrum, however this method was still limited and took many hours to compute. In the late 1960s commercial FTIR spectrometers appeared because
+% because sounds less scientific than as 
+microcomputers were able to do the Fourier transform, however
+% maybe say "contrary to what the name suggests, they were..."
+they were large and expensive. Over time, technology reduced the costs,
+% size?
+increased availability and enhanced the capabilities of FTIR spectroscopy systems\cite{spechistory}
 
 
 \subsection{Thin Film Interference}
@@ -81,7 +94,10 @@ ln\left(\frac{P(v)}{P_{0}(v)}\right)=A=-av_{\alpha\alpha'}Cx
 where $P(v)$ is the light's intensity through the sample, $P_{0}(v)$ is the intensity with no sample, $A$ is the absorbance, $a$ is the molar attenuation coefficient, $\alpha$ and $\alpha'$ are quantum numbers, $C$ is the concentration, and $x$ is the optical path length of the beam. All else being equal, the absorbance and concentration are proportional to one another.
 
 \subsection{CO Molecule IR Spectrum}
-The model used to describe this molecule and other diatomic molecules pictures a molecule in which the individual atoms, held together by chemical bonds, are in vibratory motion along these bonds, while the molecule as a whole is rotating \cite{alpert}. The energy states of this system correspond to a Hamiltonian with a potential 
+The model used to describe this molecule
+% either write "a CO molecule" or just shorten to "The model used to describe diatomic molecules..."
+and other diatomic molecules pictures a molecule in which the individual atoms, held together by chemical bonds, are in vibratory motion along these bonds, while the molecule as a whole is rotating \cite{alpert}. The energy states of this system correspond to a Hamiltonian with a potential 
+% maybe add a H = ?? + V; V=... to the equation to make it more readable?
 \begin{equation} \label{eq:CO_Potential}
 V(\boldsymbol{r})=\frac{1}{2}k(r-r_0)^2
 \end{equation}
@@ -89,7 +105,10 @@ and can be expressed as a combination of rotational and vibrational energies
 \begin{equation} \label{eq:CO_RotVibEnrg}
 E=E_{Rot}+E_{Vib}= hcw_{e}(\nu +\frac{1}{2}) + \frac{\hbar  ^2}{2I}J(J+1)
 \end{equation}
-where $h$ is Planck's constant, $c$ is the speed of light, $w_{e}$ is the wave number corresponding to the frequency of vibrations, $\nu$ is a quantum number corresponding to the vibrations,  $I$ is the molecule's moment of inertia and $J$ is a quantum number corresponding to the angular momentum of the particle \cite{griffithsQM}. However, the potential is not truly harmonic, as effects such as the centrifugal force, Coriolis and Fermi \cite{alpert} require the use of perturbation theory \cite{samurai}. Using the perturbation theory, the energy states are now
+where $h$ is Planck's constant, $c$ is the speed of light, $w_{e}$ is the wave number corresponding to the frequency of vibrations, $\nu$ is a quantum number corresponding to the vibrations,  $I$ is the molecule's moment of inertia and $J$ is a quantum number corresponding to the angular momentum of the particle \cite{griffithsQM}. However, the potential is not truly harmonic,
+% "However, this is only an approximation" may sound better
+as effects such as the centrifugal force, Coriolis and Fermi \cite{alpert} require the use of perturbation theory \cite{samurai}. Using the perturbation theory, the energy states are now
+% now is unnecessary IMO
 \begin{equation} \label{eq:CO_PeturbRotVibEnrg}
 \begin{split}
 & T=T_{Vib}+T_{Rot}=\\
@@ -97,7 +116,11 @@ where $h$ is Planck's constant, $c$ is the speed of light, $w_{e}$ is the wave n
 & B_{v}J(J+1)-D_{v}J^2(J+1)^2 
 \end{split}
 \end{equation}
-where $x_{e}$, $B_{v}$ and $D_{v}$ are constants which take into account small perturbations and $T$ is the energy states in wave number units ($T=\frac{E}{hc}$). At room temperature only the $\nu=0$ state is occupied while the $J$ states are all occupied. Therefore, using selection rules \cite{griffithsQM} only the transitions $\nu$ $\rightarrow $ $\nu'$  where $\nu ' =1,2,3$  and $J$ $\rightarrow $ $J'$ where $J'=J+1,J-1$   are of interest. Using equation (\textbf{need to add reference for the right equation)} the allowed spectral lines are derived to be
+where $x_{e}$, $B_{v}$ and $D_{v}$ are constants which take into account small perturbations and $T$ is the energy states in wave number units ($T=\frac{E}{hc}$
+% isn't it h-bar?
+). At room temperature only the $\nu=0$ state is occupied while the $J$ states are all occupied. Therefore, using selection rules \cite{griffithsQM} only the transitions $\nu$ $\rightarrow $ $\nu'$  where $\nu ' =1,2,3$  and $J$ $\rightarrow $ $J'$ where $J'=J+1,J-1$   are of interest. Using equation (\textbf{need to add reference for the right equation)}
+% notice                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+the allowed spectral lines are derived to be
 \begin{equation} \label{eq:CO_DiffPeturbEnrg}
 \begin{split}
 & \Delta T =T(\nu ',J')-T(0,J)=\\
@@ -112,17 +135,37 @@ where $\Delta T$ is the allowed spectral line, $B_{e},\alpha $ are constants rel
 There are two main measuring instruments in this experiment- FTIR and ATR. Both use Michelson interferometers and perform a Fourier transform.
 
 \subsection{Michelson Interferometers}
-A Michelson interferometer consists of two perpendicularly plane mirrors, one of which can travel in a direction perpendicular to the plane. A semi reflecting film, the beamsplitter, bisects the planes of these two mirrors. The beamsplitter splits the beam into two, one beam transmitted through the beamsplitter and the other reflected from it. Both beams then get reflected from the mirrors, returning to the beamsplitter where they recombine and interfere \cite{stuart} (see Figure 2). 
+A Michelson interferometer consists of two perpendicularly plane mirrors, one of which can travel in a direction perpendicular to the plane.
+% maybe say "can travel in and out" while less scientific per se, it's more clear
+A semi reflecting film, the beamsplitter, bisects the planes of these two mirrors. The beamsplitter splits the beam into two, one beam transmitted through the beamsplitter and the other reflected from it. Both beams then get reflected from the mirrors, returning to the beamsplitter where they recombine and interfere \cite{stuart} (see Figure 2). 
 \begin{figure}[h]
     \includegraphics[width=7cm]{Images/INTERFEROMETER.png}
     \caption{Schematic of a Michelson interferometer \cite{stuart}.}
     \label{fig:Interferometer}
     \centering
 \end{figure}
-The beam which emerges from the interferometer at 90 degrees to the input beam is called the transmitted beam and is the beam detected by the detector. The moving mirror produces an optical path difference between the two beams split by the beamsplitter. Plotting the signal produced as a function of the change of pathlength between the two beams will yield an interferogram. By performing a Fourier transform on the interferogram the spectral distribution of the beam (i.e. the amplitude of each wave number the light is consisted of) can be found.
+The beam which emerges from the interferometer at 90 degrees to the input beam is called the transmitted beam and is the beam detected by the detector.
+% "the beam detected by the detector" to "the detected beam"
+The moving mirror produces an optical path difference between the two beams split by the beamsplitter.
+% "between the two beams split by the beamsplitter" to "between the two split beams"
+Plotting the signal produced
+% maybe change to "the beam's intensity" 
+as a function of the change of
+% (optical)
+path length between the two beams will yield
+% "will yield" to "yields" ?
+an interferogram. By performing a Fourier transform on the interferogram the spectral distribution of the beam (i.e. the amplitude of each wave number the light is consisted of)
+% "is consisted of" to either "consists of" or "is made of
+can be found.
+
 \subsection{FTIR}
-FTIR stands for Fourier transform infrared. IR radiation is passed through a sample.
-Some of the infrared radiation is absorbed by the sample and some of it is
+FTIR stands for Fourier transform infrared 
+% (spectrometer) and maybe capitalise the T and I, maybe take "infrared" to "Infra Red" to make it even clearer
+.
+IR radiation is passed through a sample.
+Some of the
+% I think LTex is right, prolly remove the "Some of" 
+infrared radiation is absorbed by the sample and some of it is
 passed through (transmitted). The resulting spectrum represents the molecular
 absorption and transmission \cite{FTIRmanual}. FTIR (see Figure 3) utilises Michelson interferometers, the interferogram and a Fourier transform to perform the analysis of the spectrum. 
 \begin{figure}[h]
@@ -132,7 +175,9 @@ absorption and transmission \cite{FTIRmanual}. FTIR (see Figure 3) utilises Mich
     \centering
 \end{figure}
 
-The main components of the FTIR spectrometer are the source, a black-body source from which the IR radiation is emitted. The radiation then passes through an interferometer, where the 'spacial encoding' takes place \cite{FTIRmanual}. A He-Ne laser is used as a reference for calibration of the moving mirror's position \cite{stuart}. After going through the interferometer, an interferogram is created. The interferogram then passes through the sample, where specific wave numbers are absorbed according to the sample's characteristics and the rest are transmitted into the detector where the interferogram signal is measured. The data reaches the computer, which performs a Fourier transform yielding the infrared spectrum consisting of absorption lines corresponding to the sample. 
+The main components of the FTIR spectrometer are
+% maybe add : or "as follows"
+the source, a black-body source from which the IR radiation is emitted. The radiation then passes through an interferometer, where the 'spacial encoding' takes place \cite{FTIRmanual}. A He-Ne laser is used as a reference for calibration of the moving mirror's position \cite{stuart}. After going through the interferometer, an interferogram is created. The interferogram then passes through the sample, where specific wave numbers are absorbed according to the sample's characteristics and the rest are transmitted into the detector where the interferogram signal is measured. The data reaches the computer, which performs a Fourier transform yielding the infrared spectrum consisting of absorption lines corresponding to the sample. 
 
 \subsection{ATR}
 ATR, which stands for Attenuated Total Reflection, measures the absorbance of a liquid or solid using IR spectroscopy. A crystal with a sufficiently high refractive index to achieve total internal reflection is surrounded by the material whose absorbance is measured. 
@@ -153,7 +198,9 @@ In this part of the experiment the refractive index of a thin sample of Polyeste
 was made. Where $d$ is the sample width, $f_{fit}$ is the frequency of the fitted sine with a theoretical value of $\frac{1}{\Delta k}$, $a_{1}$ is the slope with a theoretical value of $2n_{2}$ and $a_{0}$ is the constant with a theoretical value of 0. Using the relation between the fitted frequency and width, the widths of three samples were found.
 
 \subsection{Calibration Using Ethanol} 
-In this part of the experiment the relationship between the concentration of a dissolved substance inside a solution to its total absorbance amplitude, which is assumed to be linear according to equation \ref{eq:BeerLambert} was calibrated. The calibration was done using mixtures of water and ethanol  with varying known concentrations. The mixture was put into a tank inside an ATR. Starting from a concentration of $96\%$ , the ethanol was diluted by adding more water into the mixture, thus changing the concentration of the ethanol according to 
+In this part of the experiment the relationship between the concentration of a dissolved substance inside a solution
+% ,
+to its total absorbance amplitude, which is assumed to be linear according to equation \ref{eq:BeerLambert} was calibrated. The calibration was done using mixtures of water and ethanol  with varying known concentrations. The mixture was put into a tank inside an ATR. Starting from a concentration of $96\%$ , the ethanol was diluted by adding more water into the mixture, thus changing the concentration of the ethanol according to 
 \begin{equation} \label{eq:EthanolConcentrVolume}
 C_{i}V_{i} = C_{f}V_{f}
 \end{equation}
@@ -165,19 +212,37 @@ For each concentration, $F$ , the total absorbance of ethanol in the range $1000
 was made. Where C is the concentration of ethanol in the mixture. Using the calibration, the concentration of different solutions was found. 
 
 \subsection{CO2 and IR Spectrum of CO}
-Using a pump, exhaled and outside air were each inserted into a chamber in the FTIR. For each of the two types of air the total absorbance in the IR spectrum in the range $2270-2400cm^{-1}$ were calculated. In this region there are two absorption peaks both corresponding to the concentration of CO2 in the air. The ratio between the total absorbance of the exhaled air to the outside air in that region, denoted by $S$ is therefore equal to the corresponding ratio between CO2 concentrations in each of them. $S$ will then be compared to ratios previously measured. 
-Afterwards, by pumping CO into to the same chamber in the FTIR and its IR spectrum was measured.  According to equation 8 ,  the spectrum contains absorption peaks that represent a transition in the angular momentum of the molecule, $J$  to either $J+1$ or $J-1$ (see Figure 5)  
+Using a pump, exhaled and outside air were each inserted into a chamber in the FTIR. For each of the two types of air the total absorbance in the IR spectrum in the range $2270-2400cm^{-1}$ were
+% was
+calculated. In this region there are two absorption peaks both corresponding to the concentration of CO2 in the air. The ratio between the total absorbance of the exhaled air to the outside air in that region, denoted by $S$ is therefore equal to the corresponding ratio between CO2 concentrations in each of them. $S$ will then be compared to ratios previously measured. 
+% "ratios previously measured" to "previously measured ratios"
+Afterwards, by pumping CO into to the same chamber in the FTIR and its IR spectrum was measured.
+% I don't think "and" is supposed to be there
+According to equation 8 ,
+% need to reference
+the spectrum contains absorption peaks that represent a transition in the angular momentum of the molecule, $J$  to either $J+1$ or $J-1$ (see Figure 5)
+% need to reference
 \begin{figure}[h]
     \includegraphics[width=7cm]{Images/COEnergystates.jpg}
-    \caption{CO absorption lines in the region $2025-2033 cm^{-1}$. Each peak represents a transition $m$ of the angular momentum and the transition from $\nu=0$ to $\nu'=1$ which is centered at 2142$cm^{-1}$  as can be seen and according to subsection 1.3.}
+    \caption{CO absorption lines in the region $2025-2033 cm^{-1}$. Each peak represents a transition $m$ of the angular momentum and the transition from $\nu=0$ to $\nu'=1$ which is centered at 2142$cm^{-1}$  as can be seen and according to subsection 1.3.
+    % need to reference
+    }
     \label{fig:CoEnergy}
     \centering
 \end{figure}
-Each of the peaks, $m$ , were numbered according to its order relative to the center point at 2142$cm^{-1}$ (i.e. if $m$ was the first to its left it was numbered as $-1$ and if it was the first to its right it was numbered as $1$). Afterwards, a polynomial fit of $3^{rd}$ order was made between $\Delta T$ from equation 8 and $m$
+Each of the peaks, $m$ , were numbered according to its order relative to the center point at 2142$cm^{-1}$ (i.e. if $m$ was the first to its left
+% what's "its" (I know you're talking about the center of the mustache but it's pretty unclear), writing "to the left" instead of "to its left" is also clearer if you'd prefer that
+it was numbered as $-1$ and if it was the first to its right
+% same as last comment
+it was numbered as $1$). Afterwards, a polynomial fit of $3^{rd}$ order was made between $\Delta T$ from equation 8 
+% need to reference
+and $m$
 \begin{equation} \label{eq:CO_EnrgStatesFit}
     \Delta T = a_{0}+a_{1}m+a_{2}m^2+a_{3}m^3
 \end{equation}
-The coefficients extracted from the fit will then be used to extract the coefficients in equation 8 according to the relations 
+The coefficients extracted from the fit will then be used to extract the coefficients in equation 8 
+% need to reference
+according to the relations 
 \begin{equation}
 \begin{aligned}
 \alpha &=-a_{2} & D_{v}&=-\frac{a_{3}}{4} & w_{e}&=2a_{0}-\frac{4255}{2} \\
