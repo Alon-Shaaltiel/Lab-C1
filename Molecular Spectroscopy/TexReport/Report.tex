@@ -205,11 +205,11 @@ to its total absorbance amplitude, which is assumed to be linear according to eq
 C_{i}V_{i} = C_{f}V_{f}
 \end{equation}
 where $C_{i}$,$V_{i}$, $C_{f}$,$V_{f}$ are the initial and final concentration of ethanol and volume of the mixture respectively. 
-For each concentration, $F$ , the total absorbance of ethanol in the range $1000-1120 cm^{-1}$ was calculated and a calibration graph of the form 
+For each concentration, $F$ , the total absorbance of the solution in the range $1000-1120 cm^{-1}$ was calculated. In this range lie the absorption peaks of ethanol \cite{NISTwebook} and therefore, according to \ref{eq:BeerLambert} their intensity is proportional to the concentration of ethanol in the mixture. A calibration graph of the form 
 \begin{equation} \label{eq:EthanolLinFit}
     C=a_{0}+a_{1}F 
 \end{equation} 
-was made. Where C is the concentration of ethanol in the mixture. Using the calibration, the concentration of different solutions was found. 
+was then made, Where C is the concentration of ethanol in the mixture. Using the calibration, the concentration of different solutions was found. 
 
 \subsection{$\text{CO}_{2}$ and IR Spectrum of CO}
 Using a pump, exhaled and outside air were each inserted into a chamber in the FTIR. For each of the two types of air the total absorbance in the IR spectrum in the range $2270-2400cm^{-1}$ was
@@ -321,14 +321,14 @@ in other mixtures was then found by numerically calculating the total absorption
 Using the trapezoidal rule
 % rule? RE: fixed
  the total absorbance of the air in the region $2270-2400cm^{-1}$ was calculated.
-  The total absorbance in that region is proportional to the concentration of $\text{CO}_{2}$ as there are two peaks correlating to $\text{CO}_{2}$ in said region (CITE THE WEBBOOK AGAIN!) and according to equation \ref{eq:BeerLambert} linear relation is assumed.
+  The total absorbance in that region is proportional to the concentration of $\text{CO}_{2}$ as there are two peaks correlating to $\text{CO}_{2}$ in said region \cite{NISTwebook} and according to equation \ref{eq:BeerLambert} linear relation is assumed.
 % Use $\text{CO}_{2}$ for $\text{CO}_{2}$ RE: ok
  The ratio between the total absorbance of exhaled air and outside air in that region, denoted by $S$, was calculated. $S$  also represents the ratio between $\text{CO}_{2}$ as explained above,
 % This sentence is very long. break it up into smaller sentences, like:
 % "Using the trapezoidal ??, the total absorbance of the air in the region $2270-2400cm^{-1}$ was calculated. As the total absorbance is closely correlated to the concentration of CO2 in the air, a ratio between the total absorbance of exhaled air and outside (or Tel Aviv) air, denoted by $S$, was calculated. $S$ represents the ratio between CO2 in the air and CO2 in exhaled air RE: integrated some of what you said, what do you think? 
 \begin{equation}
 \label{eq:CO2ratio}
-S=\frac{Absorbance_{Exhaled}}{Absorbance_{Outside}}=61 % Perhaps add \frac{Absorbance_{Exhaled}}{Absorbance_{Outside}}. just writing S is a bit unclear RE:fixed
+S=\frac{Absorbance_{Exhaled}}{Absorbance_{Outside}}=61 [1] % Perhaps add \frac{Absorbance_{Exhaled}}{Absorbance_{Outside}}. just writing S is a bit unclear RE:fixed
 \end{equation}
 $S$
 % "This value" to $S$ RE: fixed
@@ -438,7 +438,7 @@ The fit parameters of the linear fit can be seen in Table \ref{tbl:WidthFit}
 
 Using equation \ref{eq:ThinDiffWavenum}, the extracted refractive index is
 \begin{equation}
-    n = \frac{a_1}{2} = 1.540 \pm 0.030
+    n = \frac{a_1}{2} = 1.540 \pm 0.030 [1]
 \end{equation}
 Which is in the general area of plastics' refractive indices \cite{plasticRefract}. This is an average over the range of wave lengths in the interferogram and so, pinpointing which plastic in particular is used is impossible from the refractive index alone. Using the IR spectrum to further narrow down options may be possible, but is out of the scope of this paper.
 Using the calibrated correlation between sample width and sine frequency, the widths of three samples, whose widths were not measured but had an interferogram projected through them were approximated and can be seen in table \ref{tbl:ThinMissingWidths}.
@@ -458,25 +458,23 @@ Using the calibrated correlation between sample width and sine frequency, the wi
 \subsection{Cigar Smoke's Chemical Makeup Analysis}
 By looking at the different peak placements and shapes in the IR absorption spectrum of each cigar's smoke and comparing them to the peaks of chemicals with known peaks in the area from the literature, 
 % Did you only use that one nist website? RE: are you asking me? if so the answer is no lol
-the chemical makeup is slowly found. To aid in this endeavor, past research
+the chemical makeup was found. To aid in this endeavor, past research
 % Refrence to papers
-on the subject was consulted. The LM cigar has the widest range of wavenumbers, as such, the LM cigar smoke's IR spectrum is shown in Figures \ref{fig:DiverseLM} and \ref{fig:COCO2LM}. Other IR spectra are quite similar, Galouis and Canadian cigars have the exact same IR spectrum, down to the noise, thus, only Galouis results are shown. NEXT and Marlborro's smoke IR spectra are only between $1999\text{cm}^{-1}$ and $2400\text{cm}^{-1}$, therefore, many substances cannot be identified and quantified (See nispachim).
-% lo zocher ma hamila
-% didn't talk about noise area, may leave for appendix
-% \begin{figure}
-%     \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/LM_Diverse_Spectrum.png} 
-%     \caption{IR Spectrum from $550 \text{cm}^{-1}$ to $1999 \text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
-%     \label{fig:DiverseLM}
-% \end{figure}
+on the subject was consulted (See \cite{IRCEllSMOKE} and \cite{FTIRSPECTRAOFSMOKE} in bibliography). The LM cigar has the widest range of wavenumbers, as such, the LM cigar smoke's IR spectrum is shown in Figures \ref{fig:DiverseLM} and \ref{fig:COCO2LM}. Other IR spectra are quite similar, Galouis and Canadian cigars have the exact same IR spectrum, down to the noise, thus, only Galouis results are shown. NEXT and Marlborro's smoke IR spectra are only between $1999\text{cm}^{-1}$ and $2400\text{cm}^{-1}$, therefore, many substances cannot be identified and quantified.
+\begin{figure}
+    \includegraphics[width=\linewidth]{Images/LM_Diverse_Spectrum.png} 
+    \caption{IR Spectrum from $550 \text{cm}^{-1}$ to $1999\text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
+    \label{fig:DiverseLM}
+\end{figure}
 
-% \begin{figure}
-%     \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/LM_CO-CO2_Spectrum.png} 
-%     \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
-%     \label{fig:COCO2LM}
-% \end{figure}
-Note the bumpy area from $3500 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$, $\text{H}_{2}\text{O}$ and $\text{CO}_{2}$ have been identified in lower wavenumbers and this is likely a mix of the two.
-The area under each substance region was calculated using trapezoidal rule 
-% reference wikipedia or some paper that shows the method
+\begin{figure}
+    \includegraphics[width=\linewidth]{Images/LM_CO-CO2_Spectrum.png} 
+    \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
+    \label{fig:COCO2LM}
+\end{figure}
+Note the bumpy area from $3500 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$, $\text{H}_{2}\text{O}$ and $\text{CO}_{2}$ have been identified in lower wavenumbers and this is a mix of the two \cite{FTIRSPECTRAOFSMOKE}.
+The area under each substance region was calculated using trapezoidal rule \cite{numerical} 
+% reference wikipedia or some paper that shows the method RE: no need.
 and is taken as a proxy for substance amount. This metric does not allow for comparison between substances but does allow for comparison between cigar brands.
 The identifying regions for each substance and area for each brand are shown in Tables \ref{tbl:CigarSubstanceRegions} and \ref{tbl:CigarSubstanceAreas}. % ref 
 
@@ -502,7 +500,7 @@ The identifying regions for each substance and area for each brand are shown in 
 \begin{table}[h]
     \begin{tabular}{ |p{1.9cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
      \hline
-     \multicolumn{5}{|c|}{Area Under Identifying Regions For Each Cigar Brand} \\ \hline
+     \multicolumn{5}{|c|}{Area Under Identifying Regions For Each Cigar Brand In $\text{cm}^{-1}$ Units} \\ \hline
      Substance & NEXT & Marlborro & Galouis & LM\\ \hline
      CO & 18 & 6.6 & 18 & 22 \\ \hline % is bad with recipts 
      $\text{CO}_{2}$ & 180 & 69 & 170 & 240 \\ \hline
@@ -518,7 +516,52 @@ The identifying regions for each substance and area for each brand are shown in 
     \label{tbl:CigarSubstanceAreas}
 \end{table}
 
-Note that Acetaldehyde's area was not calculated, its wide peak is covered by Acetone and Acrolein's smaller peaks. For a comparison between the cigar brands see Summary. 
+  Every substance was identified based upon its characteristic absorption lines using papers cited in the references. Some regions contain multiple absorption lines that overlap, thus restricting the ability to identify the substances that make them up, such as the region of 1300-2000$cm^{-1}$ that contains water but also many other substances such as acetone, acetaldehyde and acrolein \cite{FTIRSPECTRAOFSMOKE}, which is why acetaldehyde total absorption could not be estimated. Although for NEXT and Marlborro cigars the IR spectrum was limited, and only CO and $\text{CO}_{2}$ absorption lines were identified (see Figure \ref{fig:COCO2NEXT}), a comparison between the different cigars based upon these gasses could still be made. Since there are absorption lines of $\text{CO}_{2}$ outside the region of $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ yet they are missing from the NEXT and Marlborro cigars IR spectrums the ratios of total absorbance between cigars for these gasses, which according to \ref{eq:BeerLambert} is also the ratio between these gasses concentrations, was calculated only using said region.  
+
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Images/NEXT_CO-CO2_Spectrum.png} 
+    \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ of NEXT cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
+    \label{fig:COCO2NEXT}
+\end{figure}
+
+Calculating the ratios between the total absorbance of $\text{CO}_{2}$ in the region 2248-2402 $\text{cm}^{-1}$ and CO in the region 2028-2238 $\text{cm}^{-1}$ yielded the following ratios (see Table \ref{tbl:CigarCO2RATIOS} and Table \ref{tbl:CigarCORATIOS} ). The ratios of $\text{CO}_{2}$ were calculated using outside air as a baseline, whose $\text{CO}_{2}$ total absorption in that region was previously measured. Using the concentration of $\text{CO}_{2}$ in air , $C_{\text{CO}_{2}}=0.041\%$ \cite{NASA}, the concentration of $\text{CO}_{2}$ in the smoke from the cigars was found as well. 
+
+\begin{table}[h]
+    \begin{tabular}{ |p{1.9cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
+     \hline
+     \multicolumn{5}{|c|}{Ratios of $\text{CO}_{2}$ for Different Cigars with outside air as a baseline} \\ \hline
+     Property & NEXT & Marlborro & Galouis & LM\\ \hline
+     $\text{CO}_{2}$ Ratio & 120 & 44 & 140 & 100 \\ \hline
+     $\text{CO}_{2}$ Concentration &4.9\% & 1.8\%& 5.7\% & 4.1\% \\\hline
+    
+    \end{tabular}
+    \caption{Ratios of $\text{CO}_{2}$ for different cigars with outside air as a baseline.}
+    \label{tbl:CigarCO2RATIOS}
+\end{table}
+
+The ratios of CO were calculated using the NEXT cigar as the baseline (see Table \ref{tbl:CigarCORATIOS}) since no measurement of CO's IR spectrum in air was made in this experiment.
+
+\begin{table}[h]
+    \begin{tabular}{ |p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
+     \hline
+     \multicolumn{3}{|c|}{Ratios of CO for Different Cigars} \\ \hline
+      Marlborro & Galouis & LM\\ \hline
+       0.36 & 1 & 1.2 \\ \hline
+    \end{tabular}
+    \caption{Ratios of $\text{CO}_{2}$ for different cigars with NEXT cigar as a baseline.}
+    \label{tbl:CigarCORATIOS}
+\end{table}
+
+The remaining ratios of gasses can only be calculated between the Galouis and LM cigars since the other two cigars contain only CO and $\text{CO}_{2}$ absorption lines in their spectrum. These remaining ratios would be referred two in the discussion and can be also calculated directly from Table \ref{tbl:CigarSubstanceAreas}.
+
+\section{Discussion}
+
+
+
+
+  
+
+
 % The harmful effects of each of the identified substances will now be listed. These effects may not necessarily occur for the concentrations in a cigar. As the concentrations were not measured, this report will be based on previous literature on the toxicity of cigars and cigarettes.
 % Starting from the top, Carbon-Monoxide (CO) can take the place of oxygen in blood transport and negatively affect the heart \cite{SubstanceDangerPaper} and dexterity.
 % % Add cite{}
