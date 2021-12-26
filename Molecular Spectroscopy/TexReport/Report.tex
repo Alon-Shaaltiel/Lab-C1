@@ -474,11 +474,11 @@ Using the calibrated correlation between sample width and sine frequency, the wi
 \end{table}
 
 \subsection{Cigar Smoke's Chemical Makeup Analysis}
-By looking at the different peak placements and shapes in the IR absorption spectrum of each cigar's smoke and comparing them to the peaks of chemicals with known peaks in the area from the literature, 
+By looking at the different peak placements and shapes in the IR absorption spectrum of each cigar's smoke and comparing them to the peaks of chemicals with known peaks in the area from the literature\cite{NISTwebook}, 
 % Did you only use that one nist website? RE: are you asking me? if so the answer is no lol
 the chemical makeup was found. To aid in this endeavor, past research
 % Refrence to papers
-on the subject was consulted (See \cite{IRCEllSMOKE} and \cite{FTIRSPECTRAOFSMOKE} in bibliography). The LM cigar has the widest range of wavenumbers, as such, the LM cigar smoke's IR spectrum is shown in Figures \ref{fig:DiverseLM} and \ref{fig:COCO2LM}. Other IR spectra are quite similar, Galouis and Canadian cigars have the exact same IR spectrum, down to the noise, thus, only Galouis results are shown. NEXT and Marlborro's smoke IR spectra are only between $1999\text{cm}^{-1}$ and $2400\text{cm}^{-1}$, therefore, many substances cannot be identified and quantified.
+on the subject was consulted (See \cite{IRCEllSMOKE} and \cite{FTIRSPECTRAOFSMOKE} in bibliography). The LM cigar has the widest range of wave numbers, as such, the LM cigar smoke's IR spectrum is shown in Figures \ref{fig:DiverseLM} and \ref{fig:COCO2LM}. From now on only "(Brand)'s IR spectrum" is written to be understood as "The (Brand) cigar smoke's IR spectrum". Other IR spectra are quite similar, Galouis and Canadian have the exact same IR spectrum, down to the noise, thus, only Galouis results are shown. NEXT and Marlborro's IR spectra are only between $1999\text{cm}^{-1}$ and $2400\text{cm}^{-1}$, therefore, many substances cannot be identified and quantified.
 \begin{figure}
     \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/LM_Diverse_Spectrum.png} 
     \caption{IR Spectrum from $550 \text{cm}^{-1}$ to $1999\text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
@@ -490,7 +490,7 @@ on the subject was consulted (See \cite{IRCEllSMOKE} and \cite{FTIRSPECTRAOFSMOK
     \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
     \label{fig:COCO2LM}
 \end{figure}
-Note the bumpy area from $3500 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$, $\text{H}_{2}\text{O}$ and $\text{CO}_{2}$ have been identified in lower wavenumbers and this is a mix of the two \cite{FTIRSPECTRAOFSMOKE}.
+Note the bumpy area from $3500 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$, $\text{H}_{2}\text{O}$ and $\text{CO}_{2}$ have been identified in lower wave numbers and this is a mix of the two \cite{FTIRSPECTRAOFSMOKE}.
 The area under each substance region was calculated using trapezoidal rule \cite{numerical} 
 % reference wikipedia or some paper that shows the method RE: no need.
 and is taken as a proxy for substance amount. This metric does not allow for comparison between substances but does allow for comparison between cigar brands.
@@ -518,7 +518,7 @@ The identifying regions for each substance and area for each brand are shown in 
 \begin{table}[h]
     \begin{tabular}{ |p{1.9cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
      \hline
-     \multicolumn{5}{|c|}{Area Under Identifying Regions For Each Cigar Brand In $\text{cm}^{-1}$ Units} \\ \hline
+     \multicolumn{5}{|c|}{Area Under Identifying Regions For Each Cigar Brand} \\ \hline
      Substance & NEXT & Marlborro & Galouis & LM\\ \hline
      CO & 18 & 6.6 & 18 & 22 \\ \hline % is bad with recipts 
      $\text{CO}_{2}$ & 180 & 69 & 170 & 240 \\ \hline
@@ -530,19 +530,23 @@ The identifying regions for each substance and area for each brand are shown in 
      Acetaldehyde & - & - & - & - \\ \hline % is bad with recipts 
      $\text{H}_{2}$O & - & - & 43 & 51 \\ \hline
     \end{tabular}
-    \caption{Area under the identifying regions of each substance in each cigar brand's smoke.}
+    \caption{Area under the identifying regions of each substance in each brand's smoke.}
     \label{tbl:CigarSubstanceAreas}
 \end{table}
 
-  Every substance was identified based upon its characteristic absorption lines using papers cited in the references. Some regions contain multiple absorption lines that overlap, thus restricting the ability to identify the substances that make them up, such as the region of 1300-2000$cm^{-1}$ that contains water but also many other substances such as acetone, acetaldehyde and acrolein \cite{FTIRSPECTRAOFSMOKE}, which is why acetaldehyde total absorption could not be estimated. Although for NEXT and Marlborro cigars the IR spectrum was limited, and only CO and $\text{CO}_{2}$ absorption lines were identified (see Figure \ref{fig:COCO2NEXT}), a comparison between the different cigars based upon these gasses could still be made. Since there are absorption lines of $\text{CO}_{2}$ outside the region of $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ yet they are missing from the NEXT and Marlborro cigars IR spectrums the ratios of total absorbance between cigars for these gasses, which according to \ref{eq:BeerLambert} is also the ratio between these gasses concentrations, was calculated only using said region.  
+Every substance was identified based upon its characteristic absorption lines\cite{NISTwebook}\cite{IRCEllSMOKE}. 
+% changed 'using papers cited in the references' to '\cite{}...
+Some regions contain multiple absorption lines that overlap, thus restricting the ability to identify the substances that make them up, such as the region of $1300-2000\text{cm}^{-1}$ that contains water but also many other substances such as Acetone, Acetaldehyde and Acrolein \cite{FTIRSPECTRAOFSMOKE}, which is why Acetaldehyde's total absorption could not be estimated. 
+NEXT and Marlborro's IR spectra are cut short, only CO and $\text{CO}_{2}$ absorption lines were identified (see Figure \ref{fig:COCO2NEXT}).
+As CO and $\text{CO}_{2}$ are present in all smoke spectra a comparison between the different brands is possible. Note that $\text{CO}_{2}$ has absorption lines outside the region $1999-2402 \text{cm}^{-1}$ and thus outside NEXT and Marlborro's IR spectra. As such, the only valid comparison is in the $1999-2402 \text{cm}^{-1}$ region. The ratios of total absorbance between cigars, which according to \ref{eq:BeerLambert} is also the ratio between concentrations was calculated.
 
-  \begin{figure}
+\begin{figure}
     \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/NEXT_CO-CO2_Spectrum.png} 
     \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ of NEXT cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
     \label{fig:COCO2NEXT}
 \end{figure}
 
-Calculating the ratios between the total absorbance of $\text{CO}_{2}$ in the region 2248-2402 $\text{cm}^{-1}$ and CO in the region 2028-2238 $\text{cm}^{-1}$ yielded the following ratios (see Table \ref{tbl:CigarCO2RATIOS} and Table \ref{tbl:CigarCORATIOS} ). The ratios of $\text{CO}_{2}$ were calculated using outside air as a baseline, whose $\text{CO}_{2}$ total absorption in that region was previously measured. Using the concentration of $\text{CO}_{2}$ in air , $C_{\text{CO}_{2}}=0.041\%$ \cite{NASA}, the concentration of $\text{CO}_{2}$ in the smoke from the cigars was found as well. 
+Calculating the ratios between the total absorbance of $\text{CO}_{2}$ in the region 2248-2402 $\text{cm}^{-1}$ and CO in the region 2028-2238 $\text{cm}^{-1}$ yielded the following ratios (see Table \ref{tbl:CigarCO2RATIOS} and Table \ref{tbl:CigarCORATIOS}). The ratios of $\text{CO}_{2}$ were calculated using outside air as a baseline, whose $\text{CO}_{2}$ total absorption in that region was previously measured. Using the concentration of $\text{CO}_{2}$ in air, $C_{\text{CO}_{2}}=0.041\%$ \cite{NASA}, the concentration of $\text{CO}_{2}$ in the smoke from the cigars was found as well. 
 
 \begin{table}[h]
     \begin{tabular}{ |p{1.9cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
