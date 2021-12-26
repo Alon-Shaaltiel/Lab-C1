@@ -214,12 +214,15 @@ This results in an exponentially decreasing amplitude and intensity.
 In a vacuum, the energy evanescent waves carry is wholly returned $\langle\frac{dU_{Eva}}{dt}\rangle=0$. However, if a sample is inserted into the ATR, and evanescent waves propagate through it, wave-lengths corresponding with the sample's normal modes are absorbed and the energy of the reflected beam is decreased $\langle\frac{dU_{Eva}}{dt}\rangle<0$. As described in the previous paragraph, the interferogram is detected and disassembled into the sample's infrared spectrum.
 
 \subsection{Transmission Through Thin Films of Polyester}
-In this part of the experiment the refractive index of a thin sample of Polyester is extracted. Thin Polyester samples with varying widths are placed in the sample area perpendicular to the beam's direction. An interferogram is projected through each sample. The resulting IR spectrum will include both the absorbance spectrum of the Polyester and the sine wave of thin film interference. To extract the frequency of interference an area of low absorbance in the spectrum is sought out, and a sine wave is fitted.  Using equation \ref{eq:ThinDiffWavenum}, the extracted sine frequency, the measured width and under the assumption that $\theta =\frac{\pi}{2}$ a fit of the form
+In this part of the experiment the refractive index of a thin sample of Polyester is extracted. Thin Polyester samples with varying widths are placed in the sample area perpendicular to the beam's direction. An interferogram is projected through each sample. The resulting IR absorbance spectrum will be a summation of the material's (Polyester's) absorbance spectrum and the sine wave showing absorption from thin film interference. To extract the frequency of interference ($\frac{1}{\Delta k}$ in eq. \ref{eq:ThinDiffWavenum}) a sine wave is fitted to the region in the absorbance spectrum with the clearest sine wave, the fit's frequency is taken as the sample's frequency. Using equation \ref{eq:ThinDiffWavenum}, the extracted sine frequency, the measured width, and $\theta=\frac{\pi}{2}$, as the sample is perpendicular to the beam, a fit of the form
 \begin{equation}
-    \label{eq:ThinLinFit}
-    d=a_{0}+a_{1}f_{fit}
+    \begin{gathered}
+        \label{eq:ThinLinFit}
+        d=a_{0}+a_{1}f_{fit} \\
+        f_{fit} = \frac{1}{\Delta k};\ a_1=2n_{2};\ a_0\approx 0
+    \end{gathered}
 \end{equation}
-was made. Where $d$ is the sample width, $f_{fit}$ is the frequency of the fitted sine with a theoretical value of $\frac{1}{\Delta k}$, $a_{1}$ is the slope with a theoretical value of $2n_{2}$ and $a_{0}$ is the constant with a theoretical value of 0. Using the relation between the fitted frequency and width, the widths of three samples were found.
+was made. Some samples' widths were not measured and only had an interferogram projected through them. By fitting a sine to their IR spectra and inputting their fitted frequency into the calibrated relation in equation \ref{eq:ThinLinFit}, their widths can be approximated.
 
 \subsection{Calibration Using Ethanol} 
 In this part of the experiment the relationship between the concentration of a dissolved substance inside a solution
@@ -277,8 +280,8 @@ B_{e}&=\frac{a_{1}-2a_{2}}{2} &  x_{e}&=\frac{a_{0}-\frac{4255}{2}}{2a_{0}-\frac
 \end{equation}
 where in order to find $w_{e}$ and $x_{e}$ the spectral line of the transition $\nu =0 \rightarrow \nu'=2$ and $\Delta J =0$ was used. 
 
-\subsection{IR Spectra of Different Cigarette Brands}
-In this part of the experiment gasses in the smoke of various cigarettes are analyzed. An interferogram is projected through regular air. A pump smokes on a cigarette and fills the sample area with smoke. An interferogram is projected through the smoke and the absorbance spectrum compared to regular air is created. Various toxic gasses are identified. The gasses' concentrations are estimated using the area of the absorbance peaks.
+\subsection{IR Spectra of Different Cigar Brands}
+In this part of the experiment gasses in the smoke of various cigars are analyzed. An interferogram is projected through regular air. A pump smokes on a cigar and fills the sample area with smoke. An interferogram is projected through the smoke and the absorbance spectrum compared to regular air is created. Various toxic gasses are identified. Each gas's total absorption (TA) was calculated using trapezoidal rule \cite{numerical} and taken as a proxy to concentration. The TA of different substances cannot be compared; However, The TA of the same substance in different cigar brands can be directly compared. The comparison will look at the different substances and relative quantities and try to rank which cigar is least to most poisonous.
 % Maybe correct the concentration claim
 
 \section{Results}
