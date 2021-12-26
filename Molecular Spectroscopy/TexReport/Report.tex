@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{natbib}
 \usepackage{chngcntr}
+\usepackage{url}
 
 \bibliographystyle{apsrev}
 \title{Bibliography management: \texttt{natbib} package}
@@ -107,7 +108,8 @@ The Beer-Lambert Law describes how a monochromatic beam of light is absorbed in 
 \begin{equation} \label{eq:BeerLambert}
 ln\left(\frac{P(v)}{P_{0}(v)}\right)=A=-av_{\alpha\alpha'}Cx
 \end{equation}
-where $P(v)$ is the light's intensity through the sample, $P_{0}(v)$ is the intensity with no sample, $A$ is the absorbance, $a$ is the molar attenuation coefficient, $\alpha$ and $\alpha'$ are quantum numbers, $C$ is the concentration, and $x$ is the optical path length of the beam. All else being equal, the absorbance and concentration are proportional to one another.
+where $P(v)$ is the light's intensity through the sample, $P_{0}(v)$ is the intensity with no sample, $A$ is the absorbance, $a$ is the molar attenuation coefficient, $\alpha$ and $\alpha'$ are quantum numbers, $C$ is the concentration, and $x$ is the optical path length of the beam, given by $n\cdot l$ where $l$ is the distance the beam traveled and $n$ is the material's refractive index. All else being equal, the absorbance and concentration are proportional to one another. \\
+The Beer-Lambert Law does have its limitations, for starters, it is only valid for low concentrations, according to (\Citeauthor{2020Beer}, \cite{2020Beer}) at higher concentrations "the individual particles of analyte no longer are independent of each other", this may change the material's absorptivity. On top of that, at high concentrations a solution's refractive index may change across concentrations, this too may change a material's refractive index \cite{2020Beer}.
 
 \subsection{CO Molecule IR Spectrum}
 The model used to describe CO molecules
@@ -571,12 +573,6 @@ The ratios of CO were calculated using the NEXT cigar as the baseline (see Table
 The remaining ratios of gasses can only be calculated between the Galouis and LM cigars since the other two cigars contain only CO and $\text{CO}_{2}$ absorption lines in their spectrum. These remaining ratios would be referred two in the discussion and can be also calculated directly from Table \ref{tbl:CigarSubstanceAreas}.
 
 \section{Discussion}
-
-
-
-
-  
-
 
 % The harmful effects of each of the identified substances will now be listed. These effects may not necessarily occur for the concentrations in a cigar. As the concentrations were not measured, this report will be based on previous literature on the toxicity of cigars and cigarettes.
 % Starting from the top, Carbon-Monoxide (CO) can take the place of oxygen in blood transport and negatively affect the heart \cite{SubstanceDangerPaper} and dexterity.
