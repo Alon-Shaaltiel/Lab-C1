@@ -198,14 +198,20 @@ The main components of the FTIR spectrometer are
 the source, a black-body source from which the IR radiation is emitted. The radiation then passes through an interferometer, where the 'spacial encoding' takes place \cite{FTIRmanual}. A He-Ne laser is used as a reference for calibration of the moving mirror's position \cite{stuart}. After going through the interferometer, an interferogram is created. The interferogram then passes through the sample, where specific wave numbers are absorbed according to the sample's characteristics and the rest are transmitted into the detector where the interferogram signal is measured. The data reaches the computer, which performs a Fourier transform yielding the infrared spectrum consisting of absorption lines corresponding to the sample. 
 
 \subsection{ATR}
-ATR, which stands for \emph{Attenuated Total Reflection}, measures the absorbance of a liquid or solid using IR spectroscopy. A crystal with a sufficiently high refractive index to achieve total internal reflection is surrounded by the material whose absorbance is measured. 
+ATR, which stands for \emph{Attenuated Total Reflection}, measures the absorbance of a liquid or solid using IR spectroscopy. A crystal with a sufficiently high refractive index to achieve total internal reflection is surrounded by the material whose absorbance is of interest. 
 \begin{figure}[h]
     \includegraphics[width=7cm]{Images/ATR.png}
     \caption{Layout of an ATR compartment \cite{wiki:ATR}}
     \label{fig:ATR}
     \centering
 \end{figure}
-An interferogram is projected into the crystal and evanescent waves, resulting from the total internal reflection, propagate through the sample. In a vacuum, the energy evanescent waves carry is wholly returned. However, when a sample is inserted, wavelengths corresponding with the sample's normal modes are absorbed. As other wavelengths are not affected, the loss in intensity across the interferogram is very small when compared with a projection through the sample. As described in the previous paragraph, the interferogram is detected and disassembled into the sample's infrared spectrum.
+An interferogram is projected into the crystal and evanescent waves, resulting from the total internal reflection, propagate through the sample. 
+Evanescent waves, similarly to most waves are a product of an amplitude and an exponent: $|\vec{E}|=Ae^{i(\omega t - \vec{k}\cdot\vec{r})}$, however, unlike most EM waves, evanescent waves have a complex $\omega$ (and $|\vec{k}|$). Separating $\omega$ and $\vec{k}$ to their Real and Imaginary parts and choosing $\vec{k}$'s direction as $\hat{z}$ yields
+\begin{equation}
+    |\vec{E}|=Ae^{i(\omega_R t - k_{R}z)}e^{-(\omega_I t + k_{I}z)}
+\end{equation}
+This results in an exponentially decreasing amplitude and intensity.
+In a vacuum, the energy evanescent waves carry is wholly returned $\langle\frac{dU_{Eva}}{dt}\rangle=0$. However, if a sample is inserted into the ATR, and evanescent waves propagate through it, wave-lengths corresponding with the sample's normal modes are absorbed and the energy of the reflected beam is decreased $\langle\frac{dU_{Eva}}{dt}\rangle<0$. As described in the previous paragraph, the interferogram is detected and disassembled into the sample's infrared spectrum.
 
 \subsection{Transmission Through Thin Films of Polyester}
 In this part of the experiment the refractive index of a thin sample of Polyester is extracted. Thin Polyester samples with varying widths are placed in the sample area perpendicular to the beam's direction. An interferogram is projected through each sample. The resulting IR spectrum will include both the absorbance spectrum of the Polyester and the sine wave of thin film interference. To extract the frequency of interference an area of low absorbance in the spectrum is sought out, and a sine wave is fitted.  Using equation \ref{eq:ThinDiffWavenum}, the extracted sine frequency, the measured width and under the assumption that $\theta =\frac{\pi}{2}$ a fit of the form
