@@ -64,22 +64,38 @@ increased availability and enhanced the capabilities of FTIR spectroscopy system
 
 
 \subsection{Thin Film Interference}
-Upon contact with a beam of light, the internal reflections in a thin sample of material with a sufficiently low refractive index are not negligible.
+Upon contact with a beam of light, the internal reflections in a thin sample of material with a sufficiently high refractive index are not negligible.
 \begin{figure}[h]
     \includegraphics[width=\linewidth]{Images/Thin film.png}
     \caption{Reflected and transmitted light waves from a thin film}
     \label{fig:ThinFilm}
 \end{figure}
-
-This experiment concerns only the transmitted beams; The reflected beams are quite similar. The phase between two consecutive transmitted beams and relative intensity are
+This experiment concerns only the transmitted beams; The treatment for reflected beams is quite similar.\\
+In this experiment only the intensity of the beams is detected, to understand how coherent light beams with the same wave-length (and frequency) affect the detected intensity an example of two beams is given. 
+The Electric fields of the two beams are
+\begin{equation*}
+    \vec{E_{i}}=E_{i}e^{i(\omega t - \vec{k}\cdot\vec{r} + \varphi_i)}\hat{\epsilon_1};\ i=1,2
+\end{equation*}
+% Should I write what everything represents?
+The detectable wave is the super-position of both waves
+\begin{equation*}
+    \vec{E} = (E_{1}+E_{2}e^{i\Delta\varphi})e^{i(\omega t - \vec{k}\cdot\vec{r} + \varphi_1)}\hat{\epsilon_1};\ \Delta\varphi=\varphi_2-\varphi_1
+\end{equation*}
+An Electromagnetic wave's intensity is proportional to $|\vec{E}|^2$ thus, the detected intensity is proportional to 
+\begin{equation*}
+\begin{split}
+    |\vec{E}|^2 = E_{1}^2 + E_2^2 + \Re\{2E_{1}E_{2}e^{i\Delta\varphi}\}\\ \rightarrow I=I_1+I_2+2\sqrt{I_1I_2}cos(\Delta\varphi)
+\end{split}
+\end{equation*}
+If $\Delta\varphi=2n\pi;\ (n\in\mathbb{Z})$, $I$ is at its maximum, this is called "Constructive interference". If $\Delta\varphi=(2n+1)\pi;\ (n\in\mathbb{Z})$, $I$ is at its minimum, this is called "Destructive interference". If $\Delta\varphi$ is changed linearly the detected intensity would result in a cosine$\backslash$sine.\\
+Now onto the transmitted beams, the phase between two consecutive transmitted beams and relative intensity are
 \begin{equation} \label{eq:ThinPhaseAmp}
-\Delta\varphi=2n_{2}dcos(\theta);\frac{I_{n+1}}{I_{n}}=r^{2}
+\Delta\varphi=k(2n_{2}dcos\theta);\frac{I_{n+1}}{I_{n}}=r^{2}
 \end{equation}
-where r is the reflection coefficient of the material and is smaller than 1, d is the sample's thickness, $\theta$ is the beam's angle inside the sample, $n_{2}$ is the sample's refractive index and $I_{n}$ is the n-th transmitted beam's intensity. Constructive interference occurs if $\Delta\varphi=\frac{m}{k}$ and if $\Delta\varphi=\frac{m+\frac{1}{2}}{k}$, destructive interference occurs. The difference in k, the wavenumber, between two constructive peaks is 
+where $k=\frac{2\pi}{\lambda}$ is the beam's wave number, $n_{2}$ is the sample's refractive index, $\theta$ is the beam's angle inside the sample,  d is the sample's thickness, $I_{n}$ is the n-th transmitted beam's intensity and $r<1$ is the reflection coefficient of the material. $2n_{2}dcos\theta$ is the Optical Path Length (OPL) difference and measures the difference in $\vec{r}$ the latter beam gained. Constructive interference occurs if $\text{OPL}=\frac{m}{k}$ and if $\text{OPL}=\frac{m+\frac{1}{2}}{k}$, destructive interference occurs. If k were changed continuously, the difference between two constructive peaks of intensity would be
 \begin{equation} \label{eq:ThinDiffWavenum}
 \Delta k=\frac{1}{2n_{2}dcos(\theta)}
-\end{equation} 
-The transmitted intensity $I_{tot}=\sum I_{i}$ is proportional to $sin(\frac{1}{\Delta k}k)+{\it const}$.
+\end{equation}
 
 % By measuring both $\Delta k$ using a Fourier transform of the intensity or a sine fit, and the thickness of the sample in the lab, the material's refractive index can be extracted 
 % \begin{equation} \label{eq:ThinRefractIndex}
@@ -462,13 +478,13 @@ the chemical makeup was found. To aid in this endeavor, past research
 % Refrence to papers
 on the subject was consulted (See \cite{IRCEllSMOKE} and \cite{FTIRSPECTRAOFSMOKE} in bibliography). The LM cigar has the widest range of wavenumbers, as such, the LM cigar smoke's IR spectrum is shown in Figures \ref{fig:DiverseLM} and \ref{fig:COCO2LM}. Other IR spectra are quite similar, Galouis and Canadian cigars have the exact same IR spectrum, down to the noise, thus, only Galouis results are shown. NEXT and Marlborro's smoke IR spectra are only between $1999\text{cm}^{-1}$ and $2400\text{cm}^{-1}$, therefore, many substances cannot be identified and quantified.
 \begin{figure}
-    \includegraphics[width=\linewidth]{Images/LM_Diverse_Spectrum.png} 
+    \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/LM_Diverse_Spectrum.png} 
     \caption{IR Spectrum from $550 \text{cm}^{-1}$ to $1999\text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
     \label{fig:DiverseLM}
 \end{figure}
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{Images/LM_CO-CO2_Spectrum.png} 
+    \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/LM_CO-CO2_Spectrum.png} 
     \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $4000 \text{cm}^{-1}$ of LM cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
     \label{fig:COCO2LM}
 \end{figure}
@@ -519,7 +535,7 @@ The identifying regions for each substance and area for each brand are shown in 
   Every substance was identified based upon its characteristic absorption lines using papers cited in the references. Some regions contain multiple absorption lines that overlap, thus restricting the ability to identify the substances that make them up, such as the region of 1300-2000$cm^{-1}$ that contains water but also many other substances such as acetone, acetaldehyde and acrolein \cite{FTIRSPECTRAOFSMOKE}, which is why acetaldehyde total absorption could not be estimated. Although for NEXT and Marlborro cigars the IR spectrum was limited, and only CO and $\text{CO}_{2}$ absorption lines were identified (see Figure \ref{fig:COCO2NEXT}), a comparison between the different cigars based upon these gasses could still be made. Since there are absorption lines of $\text{CO}_{2}$ outside the region of $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ yet they are missing from the NEXT and Marlborro cigars IR spectrums the ratios of total absorbance between cigars for these gasses, which according to \ref{eq:BeerLambert} is also the ratio between these gasses concentrations, was calculated only using said region.  
 
   \begin{figure}
-    \includegraphics[width=\linewidth]{Images/NEXT_CO-CO2_Spectrum.png} 
+    \includegraphics[width=\linewidth]{Images/Colored Cigar Spectrums/NEXT_CO-CO2_Spectrum.png} 
     \caption{IR Spectrum from $1999 \text{cm}^{-1}$ to $2402 \text{cm}^{-1}$ of NEXT cigar smoke with color-coded regions corresponding to the identifying peaks of each substance.}
     \label{fig:COCO2NEXT}
 \end{figure}
