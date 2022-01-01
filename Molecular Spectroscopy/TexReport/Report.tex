@@ -608,7 +608,8 @@ With a villainous effect on smokers comes Methanol. Methanol is added to cigars 
 Now onto Ethylene. As with $\text{CO}_2$, no literature was found that directs to potential dangers of Ethylene in cigars.
 Continuing to Isoprene. Isoprene is a possible carcinogen and may be a central nervous system depressant \cite{PubChemIsoprene}.
 Skipping over Acetaldehyde, we get to $\text{H}_2\text{O}$. No literature suggests $\text{H}_2\text{O}$ is of much danger in cigars.
-Now onto the last substance, Acetaldehyde. While a comparison is not possible, it is of importance to mention its effects. It is the most abundant carcinogen in cigar smoke and is approved for use as a pesticide.
+Now onto the last substance, Acetaldehyde. While a comparison is not possible, it is of importance to mention its effects. Acetaldehyde is a group 1 carcinogen (meaning it is highly likely to cause cancer) and is the most abundant carcinogen in cigar smoke \cite{AcetaldehydeIARC}\cite{AcetaldehydeInCigars}, and causes "nasal olfactory epithelial lesions" \cite{SubstanceDangerPaper}. It is water-soluble, as such, it remains in the smoker's saliva which furthers the exposure. Its origin is partly in the combustion of added sugars that mask the cigar's taste. It has also been shown that Acetaldehyde enhances nicotine absorption in rats \cite{AcetaldehydeInRats}, since then, cigarette companies have looked for the optimal ratio of Acetaldehyde and Nicotine, "based on the results of internal research, Philip Morris increased the level of acetaldehyde in Marlboro cigarettes by 40\% between 1982 and 1992 through the addition of sugars \cite{FortyPercentIncrease}" as stated in \cite{CigarCompaniesInternal}.
+
 
 \subsection{Ethanol}
 In this part of the experiment we measured the IR spectrum of solutions with different yet known ethanol concentration and calculated the total absorption amplitude of the solution in the range $1000-1120 cm^{-1}$ where there are absorption peaks of ethanol. A calibration graph between the concentration of ethanol in the mixture and the total absorption amplitude in that range was made using a linear fit according to Beer-Lambert Law from equation \ref{eq:BeerLambert}.
@@ -617,6 +618,26 @@ as well as in table
 % \ref
 (see appendix 1 and 2 (accurate numbering will be given later)) that the linear fit does not represent the data accurately and that a fit to a polynomial of a $2^{nd}$ degree or higher could have yielded better results. Possible reasons for the somewhat inadequate fit can be that equation \ref{eq:BeerLambert} only holds for low concentrations, where the concentrations used in this experiment went as high as 96\%. In addition to that, the absorption peaks of $CO_{2}$ have some width, and the absorption is for a number of wavelengths in that range, whereas the coefficient in Beer-Lamber Law is wavelength dependant and not constant for the entire range, another effect which was not taken into account. The consequences of the latter effect can also be seen in figure \ref{fig:EthanolMixtures} where the absorption amplitude changes differently for different wavenumbers. Regardless, the linear fit did sufficiently well and yielded good results.
 
+\subsection{CO}
+The IR spectrum of CO was measured in the range $2025-2233 cm^{-1}$ where there are absorption lines correlating to the angular momentum and vibrational transitions of the diatomic molecule. The resulting IR spectrum in that range came out similar to that described in the literature [reference to https://jila.colorado.edu/~weberjm/course-materials/CHEM-5591/Manzanares2096%20JChemEdu%20Molecular%20Constants%20of%20CO.pdf, couldn't add it...]
+There are two symmetrical absorption regions around a center point at $2141cm^{-1}$ with nearly no absorption compared to its surroindings, where the transition to $\nu'=1$ and $\Delta J=0$ lies. Using the IR spectrum, a $3^{rd}$ order polynomial fit was made according to equation \ref{eq:CO_DiffPeturbEnrg} with $\nu'=1$ as this is the relevant transition in the region measured. The fit validated the theory as can be seen in figure \ref{fig:COPolynomialfit}. This claim is also supported by the statistical values (see Table [give ref to the table] in the appendix) which are within their appropriate regions. Using the fit parameters, the coefficients in equation \ref{eq:CO_DiffPeturbEnrg} were calculated using the relations at equation \ref{eq:COFITcoefficients}. The coefficients were then compared with their corresponding theoretical values from the literature [reference[reference to https://jila.colorado.edu/~weberjm/course-materials/CHEM-5591/Manzanares2096%20JChemEdu%20Molecular%20Constants%20of%20CO.pdf, couldn't add it...] 
+(see Table \ref{tbl:COTheoreticalValues})
+\begin{table}[h]
+    \begin{tabular}{ |p{2.3cm}|p{3cm}|p{2.3cm}|p{3cm}|  }
+     \hline
+     \multicolumn{4}{|c|}{Comparison with Theoretical Values of the Coefficients In Equation \ref{eq:CO_DiffPeturbEnrg}} \\ \hline
+     Coefficient & Theoretical Value & $N\sigma$ & Nominal Value \\ \hline
+     $D_{v}[cm^{-1}]$ & $6.2\times{10^{-6}}$ & $1.2$ & $61$\% \\ \hline
+     $B_{e}[cm^{-1}]$ & $190\times{10^{-2}}$ & $3.2$ & $1.5$\%\\ \hline
+     $\alpha[cm^{-1}]$ & $1.7\times{10^{-2}}$ & $6.7$ & $5.9$\%\\ \hline
+     $w_{e}[cm^{-1]}]$ & $2170$ & $160$ & $0.51$\%\\ \hline
+     $w_{e}x_{e}[cm^{-1}]$ & $13.29$ & $72$ & $19$\% \\ \hline
+    \end{tabular}
+    \caption{Comparison of the calculated coefficients with their corresponding theoretical values taken from the literature}
+    %\cite{}}
+    \label{tbl:COTheoreticalValues}
+\end{table}
+The nominal values were calculated in addition to the calculation of $N\sigma$ because in some cases the relative error of the calculated coefficients was either too small or too big, therefore $N\sigma$ was not indicative of the closeness between the two compared values. Overall the calculated coefficients came out close to the corresponding theoretical ones, with those who are somewhat far sharing the same scale with them. In conclusion, the results are satisfactory and indicate the validity of our model and measurements.
 
 \bibliography{Report}
 
