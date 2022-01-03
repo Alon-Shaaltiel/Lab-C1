@@ -9,3 +9,4 @@ n-th
 wavenumber
 beamsplitter
 interferogram
+Suktinis
